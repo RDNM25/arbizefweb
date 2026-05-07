@@ -253,6 +253,7 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
     flex: 1 1 0;
     min-width: 0;
     padding: clamp(28px, 5vw, 64px);
+    gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -263,6 +264,18 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
 .about-desc {
     font-size: clamp(1.125rem, 1.4vw, 1.25rem);
     line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.learn-more-btn {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background: var(--purple);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition);
 }
 
 .about-image {
@@ -271,7 +284,7 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
     overflow: hidden; 
     object-fit: cover;
     position:  relative;
-    padding: clamp(16px, 5vw, 32px) 0 clamp(16px, 5vw, 32px) 0;
+    padding: 5em 0 5em 0;
 }
 
 .about-image img {
