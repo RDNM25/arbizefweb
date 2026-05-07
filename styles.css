@@ -245,16 +245,16 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
 
 .about-wrapper {
     display: grid;
+    align-items: center;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    width: 100vw;
 }
 
 .about-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(16px, 4vw, 32px); 
+    padding: clamp(16px, 4vw, 32px);
     gap: 15px;
     text-align: left;
 }
@@ -266,7 +266,6 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
 
 .about-image {
     max-height: 30em;
-    min-width: 100%;
     overflow: hidden; 
     object-fit: cover;
 }
