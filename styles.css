@@ -235,6 +235,53 @@ nav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
     text-shadow: 0 0 10px var(--purple-glow);
 }
 
+.hero-btn-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: var(--purple);
+    color: #fff;
+    box-shadow: 0 4px 20px var(--purple-glow);
+}
+.btn-primary:hover {
+    background: var(--purple-light);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px var(--purple-glow);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+    border-color: var(--border-purple);
+    background: rgba(37,99,235,0.08);
+    transform: translateY(6px) translateX(-6px) scale(0.96);
+    box-shadow: inset 4px 5px 8px black;
+}
+
+.btn-primary, .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: clamp(10px, 1.5vw, 13px) clamp(18px, 2.5vw, 26px);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    transition: transform var(--transition), box-shadow var(--transition),
+                background var(--transition), border-color var(--transition);
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-primary a, .btn-ghost a {
+    text-decoration: none;
+}
+
 #About {
     min-height: fit-content;
     background: var(--bg-card);
