@@ -37,7 +37,14 @@ function hidesidebar() {
 }
 document.addEventListener('click', (e) => {
     const sidebar = document.getElementById('sidebar');
-    if (sidebar.classList.contains('open') && !sidebar.contains(e.target)) hidesidebar();
+    const menuButton = document.querySelector('.menubutton');
+    const sidebarClose = document.querySelector('.sidebar-close');
+    if (sidebar.classList.contains('open') && 
+        !sidebar.contains(e.target) && 
+        !menuButton.contains(e.target) && 
+        !sidebarClose.contains(e.target)) {
+        hidesidebar();
+    }
 });
 
 // Reveal on scroll
