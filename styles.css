@@ -49,9 +49,6 @@ p { color: var(--muted); font-size: clamp(1.1rem, 1.4vw, 1.3rem); }
 strong { color: var(--text); }
 a { color: inherit; text-decoration: none; }
 
-/* =============================================
-   SCANLINES (subtle on light bg)
-   ============================================= */
 .scanlines {
     position: fixed;
     inset: 0;
@@ -136,7 +133,6 @@ nav a {
 }
 nav a:hover { color: var(--purple); background: rgba(22,101,52,0.07); }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     inset: 0 0 0 auto;
@@ -279,7 +275,6 @@ section {
     clip-path: inset(0);
 }
 
-/* Pixel grid background */
 .hero-grid {
     position: absolute;
     inset: 0;
@@ -291,8 +286,6 @@ section {
     pointer-events: none;
 }
 
-
-/* Arcade decorations */
 .arcade-deco {
     position: absolute;
     display: flex;
@@ -973,7 +966,6 @@ footer {
     --purple-glow:   rgba(22,101,52,0.22);
 }
 
-/* ── Body & page backgrounds ── */
 [data-theme="dark"] body          { background: var(--bg); }
 [data-theme="dark"] #About        { background: var(--bg-card); }
 [data-theme="dark"] #Services     { background: var(--bg); }
@@ -981,7 +973,6 @@ footer {
 [data-theme="dark"] #Contact      { background: var(--bg); }
 [data-theme="dark"] footer        { background: var(--bg-card); }
 
-/* ── Nav ── */
 [data-theme="dark"] nav.scrolled {
     background: rgba(13,17,23,0.92);
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
