@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/about-image.png" type="png">
-    <title>home</title>
+    <title>Arbisef.tech — Digital Studios</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/420ce22f2d.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="cursor" id="cursor"></div>
 
 <header>
     <nav id="navbar">
         <ul class="navbar">
             <li class="nav-brand">
-                <img src="logo-png" alt="logo" class="nav-logo">
-                <span>Arbisef.tech - digital studios</span>
+                <svg class="coin-logo" viewBox="0 0 28 28" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="9"  y="1"  width="10" height="2"  fill="#fbbf24"/>
+                    <rect x="5"  y="3"  width="18" height="2"  fill="#fbbf24"/>
+                    <rect x="3"  y="5"  width="22" height="18" fill="#fbbf24"/>
+                    <rect x="5"  y="23" width="18" height="2"  fill="#fbbf24"/>
+                    <rect x="9"  y="25" width="10" height="2"  fill="#fbbf24"/>
+                    <rect x="5"  y="3"  width="7"  height="2"  fill="#fde68a"/>
+                    <rect x="3"  y="5"  width="2"  height="7"  fill="#fde68a"/>
+                    <rect x="21" y="21" width="4"  height="2"  fill="#b45309"/>
+                    <rect x="23" y="12" width="2"  height="9"  fill="#b45309"/>
+                    <rect x="7"  y="5"  width="14" height="18" fill="#f59e0b"/>
+                    <rect x="5"  y="7"  width="18" height="14" fill="#f59e0b"/>
+                    <rect x="13" y="8"  width="2"  height="2"  fill="#78350f"/>
+                    <rect x="11" y="10" width="6"  height="2"  fill="#78350f"/>
+                    <rect x="9"  y="12" width="10" height="2"  fill="#78350f"/>
+                    <rect x="11" y="14" width="6"  height="2"  fill="#78350f"/>
+                    <rect x="13" y="16" width="2"  height="2"  fill="#78350f"/>
+                    <rect x="11" y="12" width="2"  height="2"  fill="#78350f"/>
+                    <rect x="15" y="12" width="2"  height="2"  fill="#78350f"/>
+                </svg>
+                <a href="index.html" style="text-decoration:none;color:inherit;">Arbisef.tech</a>
             </li>
-            <li class="hideon-mobile"><a href="index.html">Home</a></li>
+            <li class="hideon-mobile"><a href="index.html" class="nav-active">Home</a></li>
             <li class="hideon-mobile"><a href="about.html">About</a></li>
             <li class="hideon-mobile"><a href="projects.html">Services</a></li>
             <li class="hideon-mobile"><a href="socials.html">Contact us</a></li>
@@ -32,7 +52,7 @@
 
 <ul class="sidebar" id="sidebar">
     <li class="sidebar-close" onclick="hidesidebar()"><i class="fa-solid fa-xmark"></i></li>
-    <li><a href="index.html"     onclick="hidesidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="index.html"    onclick="hidesidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
     <li><a href="about.html"    onclick="hidesidebar()"><i class="fa-solid fa-user"></i> About</a></li>
     <li><a href="projects.html" onclick="hidesidebar()"><i class="fa-solid fa-folder-open"></i> Services</a></li>
     <li><a href="socials.html"  onclick="hidesidebar()"><i class="fa-regular fa-envelope"></i> Contact us</a></li>
@@ -40,53 +60,346 @@
 
 <main>
 
+<!-- ===================== HERO ===================== -->
 <section id="Hero">
-    <div class ="hero-wrapper">
-        <h1 class="hero-tag">Reshaping digital experiences, one app at a time</h1>
-        <p> Imagening, innovating, executing. </p>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="arcade-deco left" aria-hidden="true">
+        <div class="pixel-char">
+            <svg viewBox="0 0 16 16" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="0" width="8" height="2" fill="#b325eb"/>
+                <rect x="2" y="2" width="12" height="2" fill="#b325eb"/>
+                <rect x="0" y="4" width="16" height="4" fill="#b325eb"/>
+                <rect x="2" y="8" width="4" height="2" fill="#07090f"/>
+                <rect x="10" y="8" width="4" height="2" fill="#07090f"/>
+                <rect x="0" y="10" width="16" height="2" fill="#b325eb"/>
+                <rect x="2" y="12" width="12" height="2" fill="#b325eb"/>
+                <rect x="4" y="14" width="4" height="2" fill="#b325eb"/>
+                <rect x="8" y="14" width="4" height="2" fill="#b325eb"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="arcade-deco right" aria-hidden="true">
+        <div class="pixel-lives">
+            <span>♥</span><span>♥</span><span>♥</span>
+        </div>
+        <div class="pixel-score">LEVEL<br><span>01</span></div>
+    </div>
+
+    <div class="hero-wrapper">
+        <div class="hero-badge">
+            <span class="blink-dot"></span>
+            <span>INSERT COIN TO START</span>
+        </div>
+        <h1 class="hero-tag">Reshaping<br>digital<br>experiences.</h1>
+        <p class="hero-sub">We build games, websites & digital products that actually <strong>stick</strong>.</p>
         <div class="hero-btn-wrapper">
-            <div class="btn-primary">
-                <a href="about.html" class="hero-btn-link">Learn more</a>
-            </div>
-            <div class="btn-ghost">
-                <a href="projects.html" class="hero-btn-link">Our services</a>
-            </div>
+            <a href="about.html" class="btn-primary">
+                <i class="fa-solid fa-play"></i> Learn more
+            </a>
+            <a href="projects.html" class="btn-ghost">
+                <i class="fa-solid fa-gamepad"></i> Our services
+            </a>
+        </div>
+        <div class="hero-progress" aria-hidden="true">
+            <div class="progress-label">LOADING AWESOMENESS</div>
+            <div class="progress-track"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>WEB DEV</span><span class="sep">✦</span>
+            <span>GAME DEV</span><span class="sep">✦</span>
+            <span>UI/UX DESIGN</span><span class="sep">✦</span>
+            <span>MOBILE APPS</span><span class="sep">✦</span>
+            <span>BRANDING</span><span class="sep">✦</span>
+            <span>WEB DEV</span><span class="sep">✦</span>
+            <span>GAME DEV</span><span class="sep">✦</span>
+            <span>UI/UX DESIGN</span><span class="sep">✦</span>
+            <span>MOBILE APPS</span><span class="sep">✦</span>
+            <span>BRANDING</span><span class="sep">✦</span>
         </div>
     </div>
 </section>
 
+<!-- ===================== ABOUT PREVIEW ===================== -->
 <section id="About">
-    <div class="about-wrapper">
+    <div class="about-wrapper reveal">
         <div class="about-text">
-            <h2 class="shinytext">About us</h2>
-            <p class="about-desc">Arbisef.tech is a digital studio that specializes in creating innovative and user-friendly applications. 
-                                We are passionate about reshaping digital experiences and delivering high-quality products that meet the needs of our clients. 
-                                Our team of talented developers, designers, and strategists work collaboratively to bring ideas to life and create impactful solutions. 
-                                With a focus on creativity, innovation, and execution, we strive to exceed expectations and deliver exceptional results.</p>
-            <div class="learn-more">
-                <a href="about.html" class="learn-more-btn">Learn more</a>
+            <div class="section-tag">// ABOUT_US.EXE</div>
+            <h2 class="shinytext">We build the future.</h2>
+            <p class="about-desc">
+                Arbisef.tech is a boutique digital studio turning bold ideas into refined digital products.
+                From immersive games to sleek web experiences — we blend technical precision with creative energy to ship things people <strong>actually love</strong>.
+            </p>
+            <p class="about-desc">
+                Four passionate builders. One mission: make the internet more interesting.
+            </p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-num">04</span>
+                    <span class="stat-label">Team members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Projects shipped</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">Mission</span>
+                </div>
             </div>
+            <a href="about.html" class="learn-more">
+                Meet the team <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
         <div class="about-image">
-            <img src="images/about-image.jpg" alt="about us image" class="about-img">
+            <div class="img-pixel-border"></div>
+            <img src="about-image.jpg" alt="Arbisef team at work" class="about-img">
+            <div class="img-caption">// TEAM_AT_WORK.JPG</div>
         </div>
     </div>
 </section>
 
+<!-- ===================== SERVICES PREVIEW ===================== -->
 <section id="Services">
-    <div class ="services-wrapper">
-        <h2 class="shinytext">Our services</h2>
-        <p class="services-desc">At Arbisef.tech, we offer a wide range of services to help businesses and individuals bring their digital ideas to life. 
-                                Our services include web development, mobile app development, UI/UX design, and digital strategy consulting. 
-                                We work closely with our clients to understand their goals and objectives, and we tailor our services to meet their specific needs. 
-                                Whether you're looking to build a new website, create a mobile app, or develop a comprehensive digital strategy, we have the expertise and experience to help you succeed.</p>
-        <div class="learn-more">
-            <a href="projects.html" class="learn-more-btn">Learn more</a>
+    <div class="section-header reveal">
+        <div class="section-tag">// SERVICES.EXE</div>
+        <h2 class="shinytext">What we do.</h2>
+        <p class="section-sub">A full stack of creative & technical services — pick your weapon.</p>
+    </div>
+
+    <div class="services-grid reveal">
+        <div class="service-card">
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="4" width="28" height="20" rx="2" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <rect x="2" y="4" width="28" height="5" fill="#b325eb" opacity="0.3"/>
+                    <line x1="8" y1="30" x2="24" y2="30" stroke="#b325eb" stroke-width="2"/>
+                    <line x1="16" y1="24" x2="16" y2="30" stroke="#b325eb" stroke-width="2"/>
+                    <polyline points="9,16 13,12 17,16 23,10" fill="none" stroke="#ed60fa" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Performant, pixel-perfect websites and web apps. Built from scratch with modern tech stacks.</p>
+            <div class="service-tags"><span>React</span><span>Next.js</span><span>Vanilla</span></div>
+        </div>
+
+        <div class="service-card featured">
+            <div class="card-featured-tag">POPULAR</div>
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="6" width="24" height="16" rx="2" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <rect x="10" y="22" width="4" height="4" fill="#b325eb"/>
+                    <rect x="18" y="22" width="4" height="4" fill="#b325eb"/>
+                    <rect x="8" y="10" width="4" height="4" fill="#ed60fa"/>
+                    <rect x="14" y="12" width="2" height="2" fill="#fbbf24"/>
+                    <rect x="20" y="10" width="4" height="4" fill="#ed60fa"/>
+                </svg>
+            </div>
+            <h3>Game Development</h3>
+            <p>Indie games and interactive experiences. From browser-based to full desktop titles.</p>
+            <div class="service-tags"><span>Unity</span><span>WebGL</span><span>Phaser</span></div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="2" width="16" height="26" rx="3" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <circle cx="16" cy="24" r="2" fill="#b325eb"/>
+                    <rect x="11" y="8" width="6" height="1.5" fill="#ed60fa" rx="1"/>
+                    <rect x="11" y="12" width="10" height="1.5" fill="#ed60fa" rx="1"/>
+                    <rect x="11" y="16" width="4" height="1.5" fill="#ed60fa" rx="1"/>
+                </svg>
+            </div>
+            <h3>Mobile Apps</h3>
+            <p>Cross-platform mobile apps with native feel. From concept to App Store submission.</p>
+            <div class="service-tags"><span>React Native</span><span>Flutter</span></div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="12" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="4" fill="#b325eb"/>
+                    <rect x="15" y="4" width="2" height="4" fill="#ed60fa"/>
+                    <rect x="15" y="24" width="2" height="4" fill="#ed60fa"/>
+                    <rect x="4" y="15" width="4" height="2" fill="#ed60fa"/>
+                    <rect x="24" y="15" width="4" height="2" fill="#ed60fa"/>
+                </svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces that feel as good as they look. User research, wireframes, and polished prototypes.</p>
+            <div class="service-tags"><span>Figma</span><span>Prototyping</span></div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="16,3 28,9 28,23 16,29 4,23 4,9" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <polygon points="16,9 22,12 22,20 16,23 10,20 10,12" fill="#b325eb" opacity="0.2"/>
+                    <rect x="14" y="13" width="4" height="6" fill="#ed60fa"/>
+                </svg>
+            </div>
+            <h3>Branding</h3>
+            <p>Visual identities that stand out. Logos, systems, and brand guidelines built to last.</p>
+            <div class="service-tags"><span>Identity</span><span>Guidelines</span></div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="12" r="4" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <circle cx="22" cy="12" r="4" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <circle cx="16" cy="22" r="4" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <line x1="14" y1="12" x2="18" y2="12" stroke="#ed60fa" stroke-width="1.5"/>
+                    <line x1="12" y1="16" x2="14" y2="19" stroke="#ed60fa" stroke-width="1.5"/>
+                    <line x1="20" y1="16" x2="18" y2="19" stroke="#ed60fa" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <h3>Strategy & Consulting</h3>
+            <p>Digital roadmaps that make sense. We help you plan, prioritize, and execute smart.</p>
+            <div class="service-tags"><span>Roadmaps</span><span>Audits</span></div>
+        </div>
+    </div>
+
+    <a href="projects.html" class="learn-more" style="margin-top:48px;">
+        View all services <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+<!-- ===================== TEAM PREVIEW ===================== -->
+<section id="Team">
+    <div class="section-header reveal">
+        <div class="section-tag">// TEAM.EXE</div>
+        <h2 class="shinytext">The squad.</h2>
+        <p class="section-sub">Four builders. Endless curiosity. Zero compromise.</p>
+    </div>
+
+    <div class="team-grid reveal">
+        <div class="team-card">
+            <div class="team-avatar">
+                <div class="avatar-pixel" data-initials="AR"></div>
+                <div class="team-status online"></div>
+            </div>
+            <div class="team-info">
+                <div class="team-rank">PLAYER 1</div>
+                <h3>Arbi</h3>
+                <p class="team-role">Founder & Full-Stack Dev</p>
+                <p class="team-bio">The architect. Turns caffeine and ideas into production-ready code.</p>
+            </div>
+            <div class="team-skills-bar">
+                <div class="skill-item"><span>Code</span><div class="bar"><div style="width:95%"></div></div></div>
+                <div class="skill-item"><span>Vision</span><div class="bar"><div style="width:90%"></div></div></div>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-avatar">
+                <div class="avatar-pixel" data-initials="SE"></div>
+                <div class="team-status online"></div>
+            </div>
+            <div class="team-info">
+                <div class="team-rank">PLAYER 2</div>
+                <h3>Sefi</h3>
+                <p class="team-role">Game Developer</p>
+                <p class="team-bio">Lives inside game engines. Makes pixels do things they shouldn't.</p>
+            </div>
+            <div class="team-skills-bar">
+                <div class="skill-item"><span>Games</span><div class="bar"><div style="width:97%"></div></div></div>
+                <div class="skill-item"><span>Logic</span><div class="bar"><div style="width:88%"></div></div></div>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-avatar">
+                <div class="avatar-pixel" data-initials="RI"></div>
+                <div class="team-status online"></div>
+            </div>
+            <div class="team-info">
+                <div class="team-rank">PLAYER 3</div>
+                <h3>Riko</h3>
+                <p class="team-role">UI/UX Designer</p>
+                <p class="team-bio">Obsessed with the space between things. Makes every pixel intentional.</p>
+            </div>
+            <div class="team-skills-bar">
+                <div class="skill-item"><span>Design</span><div class="bar"><div style="width:93%"></div></div></div>
+                <div class="skill-item"><span>Motion</span><div class="bar"><div style="width:85%"></div></div></div>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-avatar">
+                <div class="avatar-pixel" data-initials="FA"></div>
+                <div class="team-status online"></div>
+            </div>
+            <div class="team-info">
+                <div class="team-rank">PLAYER 4</div>
+                <h3>Faza</h3>
+                <p class="team-role">Mobile & Backend Dev</p>
+                <p class="team-bio">Wrangles servers and APIs. If it runs on a phone, he built it.</p>
+            </div>
+            <div class="team-skills-bar">
+                <div class="skill-item"><span>Mobile</span><div class="bar"><div style="width:92%"></div></div></div>
+                <div class="skill-item"><span>APIs</span><div class="bar"><div style="width:89%"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="about.html" class="learn-more" style="margin-top:48px;">
+        Meet the full team <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+<!-- ===================== CONTACT CTA ===================== -->
+<section id="Contact">
+    <div class="contact-inner reveal">
+        <div class="section-tag">// CONTACT.EXE</div>
+        <h2 class="shinytext">Got a project?</h2>
+        <p class="contact-sub">Drop us a line. We read everything and reply fast.</p>
+        <div class="cta-btns" style="margin-top:16px;">
+            <a href="socials.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+            <a href="projects.html" class="btn-ghost"><i class="fa-solid fa-folder-open"></i> Our services</a>
         </div>
     </div>
 </section>
 
 </main>
 
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <svg class="coin-logo" viewBox="0 0 28 28" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="9"  y="1"  width="10" height="2"  fill="#fbbf24"/>
+                    <rect x="5"  y="3"  width="18" height="2"  fill="#fbbf24"/>
+                    <rect x="3"  y="5"  width="22" height="18" fill="#fbbf24"/>
+                    <rect x="5"  y="23" width="18" height="2"  fill="#fbbf24"/>
+                    <rect x="9"  y="25" width="10" height="2"  fill="#fbbf24"/>
+                    <rect x="5"  y="3"  width="7"  height="2"  fill="#fde68a"/>
+                    <rect x="3"  y="5"  width="2"  height="7"  fill="#fde68a"/>
+                    <rect x="21" y="21" width="4"  height="2"  fill="#b45309"/>
+                    <rect x="23" y="12" width="2"  height="9"  fill="#b45309"/>
+                    <rect x="7"  y="5"  width="14" height="18" fill="#f59e0b"/>
+                    <rect x="5"  y="7"  width="18" height="14" fill="#f59e0b"/>
+                    <rect x="13" y="8"  width="2"  height="2"  fill="#78350f"/>
+                    <rect x="11" y="10" width="6"  height="2"  fill="#78350f"/>
+                    <rect x="9"  y="12" width="10" height="2"  fill="#78350f"/>
+                    <rect x="11" y="14" width="6"  height="2"  fill="#78350f"/>
+                    <rect x="13" y="16" width="2"  height="2"  fill="#78350f"/>
+                    <rect x="11" y="12" width="2"  height="2"  fill="#78350f"/>
+                    <rect x="15" y="12" width="2"  height="2"  fill="#78350f"/>
+                </svg>
+            <span>Arbisef.tech</span>
+        </div>
+        <p class="footer-copy">© 2025 Arbisef.tech — All rights reserved.</p>
+        <div class="footer-easter"><span class="blink-text">GAME OVER? NEVER.</span></div>
+    </div>
+</footer>
+
 <script src="main.js"></script>
-</body>                                                                              
+</body>
+</html>

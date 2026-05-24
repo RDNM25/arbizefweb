@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Arbisef.tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/420ce22f2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="cursor" id="cursor"></div>
+
+<header>
+    <nav id="navbar">
+        <ul class="navbar">
+            <li class="nav-brand">
+                <div class="pixel-logo">
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                </div>
+                <a href="index.html" style="text-decoration:none;color:inherit;">Arbisef.tech</a>
+            </li>
+            <li class="hideon-mobile"><a href="index.html">Home</a></li>
+            <li class="hideon-mobile"><a href="about.html">About</a></li>
+            <li class="hideon-mobile"><a href="projects.html" class="nav-active">Services</a></li>
+            <li class="hideon-mobile"><a href="socials.html">Contact us</a></li>
+            <li class="menubutton" onclick="showsidebar()"><i class="fa-solid fa-bars"></i></li>
+        </ul>
+    </nav>
+</header>
+
+<ul class="sidebar" id="sidebar">
+    <li class="sidebar-close" onclick="hidesidebar()"><i class="fa-solid fa-xmark"></i></li>
+    <li><a href="index.html"    onclick="hidesidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"    onclick="hidesidebar()"><i class="fa-solid fa-user"></i> About</a></li>
+    <li><a href="projects.html" onclick="hidesidebar()"><i class="fa-solid fa-folder-open"></i> Services</a></li>
+    <li><a href="socials.html"  onclick="hidesidebar()"><i class="fa-regular fa-envelope"></i> Contact us</a></li>
+</ul>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+        <div class="section-tag">// SERVICES.EXE</div>
+        <h1 class="shinytext">What we build.</h1>
+        <p class="page-hero-sub">From games to full-scale web platforms. Pick your weapon — we'll handle the rest.</p>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="bc-active">Services</span>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE DEEP DIVES -->
+<section class="services-detail-section">
+
+    <div class="service-deep reveal" id="srv-web">
+        <div class="sd-icon-col">
+            <div class="sd-icon-wrap">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="6" width="44" height="32" rx="3" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <rect x="2" y="6" width="44" height="9" fill="#b325eb" opacity="0.2"/>
+                    <circle cx="9"  cy="10.5" r="2" fill="#ed60fa"/>
+                    <circle cx="16" cy="10.5" r="2" fill="#fbbf24" opacity="0.7"/>
+                    <circle cx="23" cy="10.5" r="2" fill="#22c55e" opacity="0.7"/>
+                    <rect x="8"  y="22" width="10" height="8" rx="1" fill="#b325eb" opacity="0.3"/>
+                    <rect x="22" y="22" width="18" height="2" rx="1" fill="#ed60fa" opacity="0.5"/>
+                    <rect x="22" y="27" width="12" height="2" rx="1" fill="#ed60fa" opacity="0.3"/>
+                    <rect x="14" y="42" width="20" height="3" fill="#b325eb" opacity="0.4"/>
+                    <rect x="10" y="38" width="28" height="4" fill="#b325eb" opacity="0.2"/>
+                </svg>
+            </div>
+            <div class="sd-number">01</div>
+        </div>
+        <div class="sd-content">
+            <h2>Web Development</h2>
+            <p class="sd-lead">Performant, accessible, pixel-perfect web applications. Built with modern stacks that scale — from landing pages to complex platforms.</p>
+            <div class="sd-features">
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Custom design & development</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> SEO-optimized & fast-loading</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> CMS integration & admin panels</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> E-commerce & payment systems</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> API development & integration</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Ongoing maintenance & support</div>
+            </div>
+            <div class="sd-stack">
+                <span class="sd-stack-label">STACK:</span>
+                <span>React</span><span>Next.js</span><span>Node.js</span><span>Tailwind</span><span>PostgreSQL</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-deep reveal" id="srv-game">
+        <div class="sd-icon-col">
+            <div class="sd-icon-wrap" style="--ic: rgba(124,58,237,0.15); --ib: rgba(124,58,237,0.4);">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="10" width="40" height="26" rx="4" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <rect x="8"  y="20" width="2" height="6" fill="#ed60fa"/>
+                    <rect x="5"  y="23" width="8" height="2" fill="#ed60fa"/>
+                    <circle cx="36" cy="22" r="2" fill="#fbbf24"/>
+                    <circle cx="40" cy="26" r="2" fill="#22c55e" opacity="0.8"/>
+                    <circle cx="32" cy="26" r="2" fill="#ef4444" opacity="0.8"/>
+                    <circle cx="36" cy="30" r="2" fill="#3b82f6" opacity="0.8"/>
+                    <rect x="20" y="14" width="8" height="4" rx="1" fill="#b325eb" opacity="0.4"/>
+                    <rect x="22" y="28" width="4" height="2" fill="#b325eb" opacity="0.3"/>
+                    <rect x="18" y="42" width="12" height="3" fill="#b325eb" opacity="0.3"/>
+                </svg>
+            </div>
+            <div class="sd-number">02</div>
+        </div>
+        <div class="sd-content">
+            <h2>Game Development</h2>
+            <p class="sd-lead">Indie games, browser titles, and interactive experiences that keep players hooked. We craft mechanics-first, visuals second — because fun is non-negotiable.</p>
+            <div class="sd-features">
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> 2D & 3D game development</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Browser & WebGL games</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Mobile game development</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Game design & mechanics</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Multiplayer & leaderboards</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Monetization & publishing</div>
+            </div>
+            <div class="sd-stack">
+                <span class="sd-stack-label">STACK:</span>
+                <span>Unity</span><span>C#</span><span>Phaser.js</span><span>WebGL</span><span>Blender</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-deep reveal" id="srv-mobile">
+        <div class="sd-icon-col">
+            <div class="sd-icon-wrap" style="--ic: rgba(8,145,178,0.15); --ib: rgba(8,145,178,0.4);">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="12" y="2" width="24" height="44" rx="4" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <rect x="16" y="8" width="16" height="24" fill="#b325eb" opacity="0.12"/>
+                    <rect x="19" y="10" width="10" height="2" rx="1" fill="#ed60fa" opacity="0.7"/>
+                    <rect x="19" y="15" width="10" height="2" rx="1" fill="#ed60fa" opacity="0.5"/>
+                    <rect x="19" y="20" width="6"  height="2" rx="1" fill="#ed60fa" opacity="0.4"/>
+                    <circle cx="24" cy="40" r="3" fill="none" stroke="#b325eb" stroke-width="1.5"/>
+                    <rect x="21" y="5" width="6" height="1.5" rx="1" fill="#b325eb" opacity="0.4"/>
+                </svg>
+            </div>
+            <div class="sd-number">03</div>
+        </div>
+        <div class="sd-content">
+            <h2>Mobile Apps</h2>
+            <p class="sd-lead">Cross-platform mobile apps with a native feel. iOS and Android from a single codebase — no quality compromise. From idea to App Store in record time.</p>
+            <div class="sd-features">
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> iOS & Android development</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Offline-first architecture</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Push notifications & deep links</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> In-app purchases & subscriptions</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> App Store optimization</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Analytics & crash reporting</div>
+            </div>
+            <div class="sd-stack">
+                <span class="sd-stack-label">STACK:</span>
+                <span>Flutter</span><span>Dart</span><span>Firebase</span><span>React Native</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-deep reveal" id="srv-design">
+        <div class="sd-icon-col">
+            <div class="sd-icon-wrap" style="--ic: rgba(219,39,119,0.15); --ib: rgba(219,39,119,0.4);">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <circle cx="24" cy="24" r="6"  fill="#b325eb" opacity="0.3"/>
+                    <circle cx="24" cy="24" r="2"  fill="#ed60fa"/>
+                    <line x1="24" y1="6"  x2="24" y2="14" stroke="#ed60fa" stroke-width="2"/>
+                    <line x1="24" y1="34" x2="24" y2="42" stroke="#ed60fa" stroke-width="2"/>
+                    <line x1="6"  y1="24" x2="14" y2="24" stroke="#ed60fa" stroke-width="2"/>
+                    <line x1="34" y1="24" x2="42" y2="24" stroke="#ed60fa" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="sd-number">04</div>
+        </div>
+        <div class="sd-content">
+            <h2>UI/UX Design</h2>
+            <p class="sd-lead">Interfaces that feel as good as they look. Every decision rooted in real user research — wireframes, prototypes, and polished design systems that scale.</p>
+            <div class="sd-features">
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> UX research & user testing</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Wireframing & prototyping</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Design systems & components</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Motion & micro-interaction design</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Accessibility audits</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Developer handoff</div>
+            </div>
+            <div class="sd-stack">
+                <span class="sd-stack-label">TOOLS:</span>
+                <span>Figma</span><span>Framer</span><span>After Effects</span><span>Lottie</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-deep reveal" id="srv-brand">
+        <div class="sd-icon-col">
+            <div class="sd-icon-wrap" style="--ic: rgba(251,191,36,0.1); --ib: rgba(251,191,36,0.3);">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="24,4 44,14 44,34 24,44 4,34 4,14" fill="none" stroke="#b325eb" stroke-width="2"/>
+                    <polygon points="24,14 34,19 34,29 24,34 14,29 14,19" fill="#b325eb" opacity="0.15"/>
+                    <rect x="21" y="20" width="6" height="8" fill="#ed60fa" opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="sd-number">05</div>
+        </div>
+        <div class="sd-content">
+            <h2>Branding & Identity</h2>
+            <p class="sd-lead">Visual identities built to last. We craft logos, color systems, and brand guidelines that make you instantly recognizable — across every touchpoint.</p>
+            <div class="sd-features">
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Logo design & variations</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Brand guidelines & style guide</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Color & typography systems</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Social media kit</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Pitch deck & presentation design</div>
+                <div class="sd-feature"><i class="fa-solid fa-check"></i> Brand refresh & rebranding</div>
+            </div>
+            <div class="sd-stack">
+                <span class="sd-stack-label">TOOLS:</span>
+                <span>Illustrator</span><span>Figma</span><span>Photoshop</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+    <div class="section-header reveal">
+        <div class="section-tag">// HOW_IT_WORKS.EXE</div>
+        <h2 class="shinytext">Our process.</h2>
+        <p class="section-sub">Simple, transparent, effective.</p>
+    </div>
+    <div class="process-steps reveal">
+        <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-line"></div>
+            <h3>Discovery</h3>
+            <p>We dig into your goals, users, and constraints. No assumptions — just honest questions.</p>
+        </div>
+        <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-line"></div>
+            <h3>Design</h3>
+            <p>Wireframes, prototypes, and a plan you can react to — before a single line of code is written.</p>
+        </div>
+        <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-line"></div>
+            <h3>Build</h3>
+            <p>We ship in iterations. You see real progress weekly — not six months from now.</p>
+        </div>
+        <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-line" style="display:none"></div>
+            <h3>Launch</h3>
+            <p>Deploy, polish, and hand off. We stay on deck for the landing — and beyond.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-inner reveal">
+        <div class="section-tag">// START_PROJECT.EXE</div>
+        <h2 class="shinytext">Ready to start?</h2>
+        <p>Tell us what you're building. We'll tell you how we'd approach it.</p>
+        <div class="cta-btns">
+            <a href="socials.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+            <a href="about.html" class="btn-ghost"><i class="fa-solid fa-user"></i> Meet the team</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="pixel-logo small">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+            <span>Arbisef.tech</span>
+        </div>
+        <p class="footer-copy">© 2025 Arbisef.tech — All rights reserved.</p>
+        <div class="footer-easter"><span class="blink-text">GAME OVER? NEVER.</span></div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

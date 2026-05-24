@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Arbisef.tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/420ce22f2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="cursor" id="cursor"></div>
+
+<header>
+    <nav id="navbar">
+        <ul class="navbar">
+            <li class="nav-brand">
+                <div class="pixel-logo">
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                </div>
+                <a href="index.html" style="text-decoration:none;color:inherit;">Arbisef.tech</a>
+            </li>
+            <li class="hideon-mobile"><a href="index.html">Home</a></li>
+            <li class="hideon-mobile"><a href="about.html" class="nav-active">About</a></li>
+            <li class="hideon-mobile"><a href="projects.html">Services</a></li>
+            <li class="hideon-mobile"><a href="socials.html">Contact us</a></li>
+            <li class="menubutton" onclick="showsidebar()"><i class="fa-solid fa-bars"></i></li>
+        </ul>
+    </nav>
+</header>
+
+<ul class="sidebar" id="sidebar">
+    <li class="sidebar-close" onclick="hidesidebar()"><i class="fa-solid fa-xmark"></i></li>
+    <li><a href="index.html"    onclick="hidesidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"    onclick="hidesidebar()"><i class="fa-solid fa-user"></i> About</a></li>
+    <li><a href="projects.html" onclick="hidesidebar()"><i class="fa-solid fa-folder-open"></i> Services</a></li>
+    <li><a href="socials.html"  onclick="hidesidebar()"><i class="fa-regular fa-envelope"></i> Contact us</a></li>
+</ul>
+
+<main>
+
+<!-- HERO BANNER -->
+<section class="page-hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+        <div class="section-tag">// ABOUT_US.EXE</div>
+        <h1 class="shinytext">Who we are.</h1>
+        <p class="page-hero-sub">A small studio with big ambitions. We obsess over craft, shipping products that feel alive.</p>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="bc-active">About</span>
+        </div>
+    </div>
+</section>
+
+<!-- STORY -->
+<section class="story-section">
+    <div class="story-wrapper reveal">
+        <div class="story-image-col">
+            <div class="img-frame">
+                <img src="about-image.jpg" alt="Team at work" class="story-img">
+                <div class="img-caption">// TEAM_AT_WORK.JPG</div>
+            </div>
+            <div class="floating-badge reveal-delay-1">
+                <span class="badge-num">2023</span>
+                <span class="badge-label">Founded</span>
+            </div>
+        </div>
+        <div class="story-text-col">
+            <div class="section-tag">// OUR_STORY</div>
+            <h2 class="shinytext">Built by makers,<br>for makers.</h2>
+            <p>Arbisef.tech started with four friends who refused to settle for boring digital products. We came together with one shared belief: the internet deserves better — more creative, more intentional, more <strong>alive</strong>.</p>
+            <p>From our first late-night builds to shipping products used by thousands, we've stayed true to our roots: small team, high craft, zero compromise.</p>
+            <p>Today we design and develop games, websites, mobile apps, and digital experiences that push the boundaries of what screens can feel like.</p>
+            <div class="story-values">
+                <div class="value-pill"><i class="fa-solid fa-bolt"></i> Fast</div>
+                <div class="value-pill"><i class="fa-solid fa-gem"></i> Crafted</div>
+                <div class="value-pill"><i class="fa-solid fa-gamepad"></i> Playful</div>
+                <div class="value-pill"><i class="fa-solid fa-fire"></i> Bold</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+    <div class="stat-item">
+        <span class="stat-big">4</span>
+        <span class="stat-desc">Team members</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+        <span class="stat-big">2+</span>
+        <span class="stat-desc">Years building</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+        <span class="stat-big">10+</span>
+        <span class="stat-desc">Projects shipped</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+        <span class="stat-big">∞</span>
+        <span class="stat-desc">Lines of code</span>
+    </div>
+</div>
+
+<!-- TEAM -->
+<section class="team-section">
+    <div class="section-header reveal">
+        <div class="section-tag">// THE_SQUAD.EXE</div>
+        <h2 class="shinytext">Meet the team.</h2>
+        <p class="section-sub">Four players. Different skills. One goal.</p>
+    </div>
+
+    <div class="team-full-grid">
+
+        <div class="team-full-card reveal">
+            <div class="tfc-left">
+                <div class="tfc-avatar" data-initials="AR" style="--c1:#b325eb;--c2:#ed60fa"></div>
+                <div class="tfc-rank">PLAYER 1</div>
+                <div class="tfc-status"><span class="online-dot"></span> Online</div>
+            </div>
+            <div class="tfc-right">
+                <h3>Arbi</h3>
+                <p class="tfc-role"><i class="fa-solid fa-code"></i> Founder & Full-Stack Developer</p>
+                <p class="tfc-bio">The architect behind Arbisef.tech. Arbi turns caffeine and ideas into production-ready systems. Passionate about clean code and shipping things that last. When not coding, he's probably redesigning something that wasn't broken.</p>
+                <div class="tfc-skills">
+                    <div class="tfc-skill-row"><span>Full-Stack</span><div class="tfc-bar"><div style="width:95%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Leadership</span><div class="tfc-bar"><div style="width:90%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Strategy</span><div class="tfc-bar"><div style="width:88%"></div></div></div>
+                </div>
+                <div class="tfc-tags">
+                    <span>React</span><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-full-card reveal">
+            <div class="tfc-left">
+                <div class="tfc-avatar" data-initials="SE" style="--c1:#7c3aed;--c2:#a78bfa"></div>
+                <div class="tfc-rank">PLAYER 2</div>
+                <div class="tfc-status"><span class="online-dot"></span> Online</div>
+            </div>
+            <div class="tfc-right">
+                <h3>Sefi</h3>
+                <p class="tfc-role"><i class="fa-solid fa-gamepad"></i> Game Developer</p>
+                <p class="tfc-bio">Sefi lives inside game engines. He makes pixels do things they were never designed to do. With a deep love for game mechanics and interactive storytelling, Sefi brings the fun factor to everything Arbisef touches.</p>
+                <div class="tfc-skills">
+                    <div class="tfc-skill-row"><span>Game Dev</span><div class="tfc-bar"><div style="width:97%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Physics</span><div class="tfc-bar"><div style="width:91%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Shaders</span><div class="tfc-bar"><div style="width:85%"></div></div></div>
+                </div>
+                <div class="tfc-tags">
+                    <span>Unity</span><span>C#</span><span>WebGL</span><span>Phaser.js</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-full-card reveal">
+            <div class="tfc-left">
+                <div class="tfc-avatar" data-initials="RI" style="--c1:#db2777;--c2:#f472b6"></div>
+                <div class="tfc-rank">PLAYER 3</div>
+                <div class="tfc-status"><span class="online-dot"></span> Online</div>
+            </div>
+            <div class="tfc-right">
+                <h3>Riko</h3>
+                <p class="tfc-role"><i class="fa-solid fa-palette"></i> UI/UX Designer</p>
+                <p class="tfc-bio">Riko is obsessed with the space between things. Every margin, every transition, every color choice — intentional. She translates chaotic product ideas into clear, beautiful experiences that users actually enjoy using.</p>
+                <div class="tfc-skills">
+                    <div class="tfc-skill-row"><span>UI Design</span><div class="tfc-bar"><div style="width:96%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Motion</span><div class="tfc-bar"><div style="width:88%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Research</span><div class="tfc-bar"><div style="width:82%"></div></div></div>
+                </div>
+                <div class="tfc-tags">
+                    <span>Figma</span><span>After Effects</span><span>Framer</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-full-card reveal">
+            <div class="tfc-left">
+                <div class="tfc-avatar" data-initials="FA" style="--c1:#0891b2;--c2:#22d3ee"></div>
+                <div class="tfc-rank">PLAYER 4</div>
+                <div class="tfc-status"><span class="online-dot"></span> Online</div>
+            </div>
+            <div class="tfc-right">
+                <h3>Faza</h3>
+                <p class="tfc-role"><i class="fa-solid fa-server"></i> Mobile & Backend Developer</p>
+                <p class="tfc-bio">Faza wrangles servers, databases, and mobile platforms without breaking a sweat. If it runs on a phone or powers an API, he built it. The quiet force ensuring everything actually works — reliably, at scale.</p>
+                <div class="tfc-skills">
+                    <div class="tfc-skill-row"><span>Mobile</span><div class="tfc-bar"><div style="width:94%"></div></div></div>
+                    <div class="tfc-skill-row"><span>Backend</span><div class="tfc-bar"><div style="width:91%"></div></div></div>
+                    <div class="tfc-skill-row"><span>DevOps</span><div class="tfc-bar"><div style="width:80%"></div></div></div>
+                </div>
+                <div class="tfc-tags">
+                    <span>Flutter</span><span>Firebase</span><span>Docker</span><span>Go</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+    <div class="section-header reveal">
+        <div class="section-tag">// CORE_VALUES.EXE</div>
+        <h2 class="shinytext">How we operate.</h2>
+        <p class="section-sub">The principles we actually live by.</p>
+    </div>
+    <div class="values-grid reveal">
+        <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Ship fast, iterate faster</h3>
+            <p>We bias toward action. A real product in users' hands beats a perfect product in Figma every time.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+            <h3>Craft over quantity</h3>
+            <p>We'd rather build one exceptional thing than five average ones. Every pixel earns its place.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>Collaboration is core</h3>
+            <p>Great products don't come from silos. We're radically transparent with each other and our clients.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Stay curious always</h3>
+            <p>We're students first. The best idea wins — regardless of who or where it comes from.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-inner reveal">
+        <div class="section-tag">// READY_TO_PLAY.EXE</div>
+        <h2 class="shinytext">Want to build<br>something great?</h2>
+        <p>We're always open to interesting projects and good conversations.</p>
+        <div class="cta-btns">
+            <a href="socials.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+            <a href="projects.html" class="btn-ghost"><i class="fa-solid fa-folder-open"></i> Our services</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="pixel-logo small">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+            <span>Arbisef.tech</span>
+        </div>
+        <p class="footer-copy">© 2025 Arbisef.tech — All rights reserved.</p>
+        <div class="footer-easter"><span class="blink-text">GAME OVER? NEVER.</span></div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

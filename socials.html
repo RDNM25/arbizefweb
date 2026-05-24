@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Arbisef.tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="socials.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/420ce22f2d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="cursor" id="cursor"></div>
+
+<header>
+    <nav id="navbar">
+        <ul class="navbar">
+            <li class="nav-brand">
+                <div class="pixel-logo">
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                </div>
+                <a href="index.html" style="text-decoration:none;color:inherit;">Arbisef.tech</a>
+            </li>
+            <li class="hideon-mobile"><a href="index.html">Home</a></li>
+            <li class="hideon-mobile"><a href="about.html">About</a></li>
+            <li class="hideon-mobile"><a href="projects.html">Services</a></li>
+            <li class="hideon-mobile"><a href="socials.html" class="nav-active">Contact us</a></li>
+            <li class="menubutton" onclick="showsidebar()"><i class="fa-solid fa-bars"></i></li>
+        </ul>
+    </nav>
+</header>
+
+<ul class="sidebar" id="sidebar">
+    <li class="sidebar-close" onclick="hidesidebar()"><i class="fa-solid fa-xmark"></i></li>
+    <li><a href="index.html"    onclick="hidesidebar()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"    onclick="hidesidebar()"><i class="fa-solid fa-user"></i> About</a></li>
+    <li><a href="projects.html" onclick="hidesidebar()"><i class="fa-solid fa-folder-open"></i> Services</a></li>
+    <li><a href="socials.html"  onclick="hidesidebar()"><i class="fa-regular fa-envelope"></i> Contact us</a></li>
+</ul>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+        <div class="section-tag">// CONTACT.EXE</div>
+        <h1 class="shinytext">Let's talk.</h1>
+        <p class="page-hero-sub">Have a project in mind? A wild idea? Just want to say hi? We're all ears.</p>
+        <div class="availability-chip">
+            <span class="badge-dot-anim"></span>
+            Available for new projects
+        </div>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="bc-active">Contact</span>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT MAIN -->
+<section class="contact-main-section">
+    <div class="contact-layout reveal">
+
+        <!-- LEFT: FORM -->
+        <div class="contact-form-panel">
+            <div class="panel-header">
+                <div class="terminal-dots">
+                    <span style="background:#ef4444"></span>
+                    <span style="background:#fbbf24"></span>
+                    <span style="background:#22c55e"></span>
+                </div>
+                <span class="terminal-title">// new_message.txt</span>
+            </div>
+            <div class="panel-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>YOUR NAME</label>
+                        <input type="text" id="f-name" placeholder="Player One" class="arcade-input">
+                    </div>
+                    <div class="form-group">
+                        <label>EMAIL</label>
+                        <input type="email" id="f-email" placeholder="you@domain.com" class="arcade-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>SUBJECT</label>
+                    <div class="subject-chips">
+                        <span class="chip active" onclick="selectChip(this)">New project</span>
+                        <span class="chip" onclick="selectChip(this)">Collaboration</span>
+                        <span class="chip" onclick="selectChip(this)">Question</span>
+                        <span class="chip" onclick="selectChip(this)">Just saying hi</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>YOUR MESSAGE</label>
+                    <textarea id="f-msg" class="arcade-input" rows="5" placeholder="Tell us what you're thinking..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>BUDGET RANGE (optional)</label>
+                    <div class="budget-options">
+                        <label class="budget-opt">
+                            <input type="radio" name="budget" value="<1k">
+                            <span>&lt; $1k</span>
+                        </label>
+                        <label class="budget-opt">
+                            <input type="radio" name="budget" value="1-5k">
+                            <span>$1k – $5k</span>
+                        </label>
+                        <label class="budget-opt">
+                            <input type="radio" name="budget" value="5-20k">
+                            <span>$5k – $20k</span>
+                        </label>
+                        <label class="budget-opt">
+                            <input type="radio" name="budget" value="20k+">
+                            <span>$20k+</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn-primary send-btn" id="contactSend">
+                    <i class="fa-solid fa-paper-plane"></i> SEND MESSAGE
+                </button>
+                <div class="form-note">We typically reply within 24 hours.</div>
+            </div>
+        </div>
+
+        <!-- RIGHT: INFO + SOCIALS -->
+        <div class="contact-info-panel">
+            <div class="info-panel-block">
+                <div class="section-tag">// REACH_US</div>
+                <h3 class="info-heading">Find us here.</h3>
+                <div class="contact-channels">
+                    <a href="mailto:hello@arbisef.tech" class="channel-card">
+                        <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="channel-text">
+                            <span class="channel-label">Email</span>
+                            <strong>hello@arbisef.tech</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ch-arrow"></i>
+                    </a>
+                    <a href="#" class="channel-card">
+                        <div class="channel-icon discord"><i class="fa-brands fa-discord"></i></div>
+                        <div class="channel-text">
+                            <span class="channel-label">Discord</span>
+                            <strong>arbisef.tech</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ch-arrow"></i>
+                    </a>
+                    <a href="#" class="channel-card">
+                        <div class="channel-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="channel-text">
+                            <span class="channel-label">Instagram</span>
+                            <strong>@arbisef.tech</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ch-arrow"></i>
+                    </a>
+                    <a href="#" class="channel-card">
+                        <div class="channel-icon github"><i class="fa-brands fa-github"></i></div>
+                        <div class="channel-text">
+                            <span class="channel-label">GitHub</span>
+                            <strong>github.com/arbisef</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ch-arrow"></i>
+                    </a>
+                    <a href="#" class="channel-card">
+                        <div class="channel-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
+                        <div class="channel-text">
+                            <span class="channel-label">X / Twitter</span>
+                            <strong>@arbisef_tech</strong>
+                        </div>
+                        <i class="fa-solid fa-arrow-right ch-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-panel-block">
+                <div class="section-tag">// STATUS</div>
+                <div class="status-panel">
+                    <div class="status-row">
+                        <span class="status-label">Availability</span>
+                        <span class="status-val open"><span class="badge-dot-anim"></span> Open</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">Response time</span>
+                        <span class="status-val">&lt; 24 hours</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">Timezone</span>
+                        <span class="status-val">WIB (UTC+7)</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">Location</span>
+                        <span class="status-val">Bandung, Indonesia 🇮🇩</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini arcade graphic -->
+            <div class="arcade-card" aria-hidden="true">
+                <div class="arcade-screen">
+                    <div class="ac-line">ARBISEF.TECH</div>
+                    <div class="ac-line muted">DIGITAL STUDIO</div>
+                    <div class="ac-gap"></div>
+                    <div class="ac-line blink">INSERT COIN</div>
+                    <div class="ac-line muted">TO COLLABORATE</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="section-header reveal">
+        <div class="section-tag">// FAQ.EXE</div>
+        <h2 class="shinytext">Common questions.</h2>
+    </div>
+    <div class="faq-list reveal">
+        <details class="faq-item">
+            <summary><span>How long does a typical project take?</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+            <p>It depends on scope. A landing page can be done in 1–2 weeks. A full web app or game can take 2–4 months. We'll give you a clear timeline after our first conversation.</p>
+        </details>
+        <details class="faq-item">
+            <summary><span>Do you work with clients remotely?</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+            <p>100%. We're a remote-first team and have worked with clients across different countries. We use async tools and weekly video check-ins to keep things smooth.</p>
+        </details>
+        <details class="faq-item">
+            <summary><span>What's your payment structure?</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+            <p>We typically work with a 50% upfront deposit and 50% on delivery. For larger projects, we can split into milestones. We accept bank transfer, PayPal, and crypto.</p>
+        </details>
+        <details class="faq-item">
+            <summary><span>Can you maintain the project after launch?</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+            <p>Yes. We offer retainer-based maintenance packages for hosting, updates, and new features. Most clients stick around — which we think says a lot.</p>
+        </details>
+        <details class="faq-item">
+            <summary><span>I just have an idea — is that enough to reach out?</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+            <p>Absolutely. Some of our best projects started as a rough napkin sketch. Come as you are — we're good at helping shape ideas into something real.</p>
+        </details>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="pixel-logo small">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+            <span>Arbisef.tech</span>
+        </div>
+        <p class="footer-copy">© 2025 Arbisef.tech — All rights reserved.</p>
+        <div class="footer-easter"><span class="blink-text">GAME OVER? NEVER.</span></div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="socials.js"></script>
+</body>
+</html>
