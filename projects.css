@@ -29,7 +29,7 @@
     width: 100%;
 }
 .service-deep:hover {
-    border-color: var(--border-purple);
+    border-color: var(--border-green);
     transform: translateX(6px);
     box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
@@ -99,7 +99,7 @@
     line-height: 1.4;
 }
 .sd-feature i {
-    color: var(--purple-light);
+    color: var(--green-light);
     font-size: 0.7rem;
     flex-shrink: 0;
 }
@@ -122,7 +122,7 @@
 .sd-stack span:not(.sd-stack-label) {
     font-family: var(--font-display);
     font-size: 0.37rem;
-    color: var(--purple-light);
+    color: var(--green-light);
     background: rgba(109,40,217,0.1);
     border: 1px solid rgba(109,40,217,0.2);
     padding: 4px 11px;
@@ -170,7 +170,7 @@
 .step-num {
     font-family: var(--font-display);
     font-size: 1.5rem;
-    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    background: linear-gradient(90deg, var(--green), var(--green-light));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -184,7 +184,7 @@
     right: 8px;
     width: calc(100% - 48px);
     height: 1px;
-    background: linear-gradient(90deg, var(--border-purple), transparent);
+    background: linear-gradient(90deg, var(--border-green), transparent);
 }
 
 .process-step h3 {
