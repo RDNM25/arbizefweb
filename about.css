@@ -34,11 +34,11 @@
     color: var(--muted);
     margin-top: 6px;
 }
-.breadcrumb a { color: var(--purple); transition: color var(--transition); }
+.breadcrumb a { color: var(--green); transition: color var(--transition); }
 .breadcrumb a:hover { color: #fff; }
 .breadcrumb .bc-active { color: var(--text); }
 
-nav a.nav-active { color: var(--purple) !important; }
+nav a.nav-active { color: var(--green) !important; }
 
 .story-section {
     padding: 80px clamp(20px,6vw,100px);
@@ -71,7 +71,7 @@ nav a.nav-active { color: var(--purple) !important; }
     position: relative;
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1.5px solid var(--border-purple);
+    border: 1.5px solid var(--border-green);
 }
 
 .story-img {
@@ -91,14 +91,14 @@ nav a.nav-active { color: var(--purple) !important; }
     position: absolute;
     bottom: 0;
     right: -12px;
-    background: var(--purple);
+    background: var(--green);
     border: 2px solid var(--bg);
     border-radius: var(--radius-sm);
     padding: 14px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 8px 30px var(--purple-glow);
+    box-shadow: 0 8px 30px var(--green-glow);
     z-index: 2;
 }
 .badge-num {
@@ -121,11 +121,11 @@ nav a.nav-active { color: var(--purple) !important; }
     z-index: 2;
     font-family: var(--font-display);
     font-size: 0.38rem;
-    color: var(--purple);
+    color: var(--green);
     opacity: 0.8;
     background: rgba(7,9,15,0.75);
     padding: 4px 10px;
-    border: 1.5px solid var(--border-purple);
+    border: 1.5px solid var(--border-green);
     border-radius: 4px;
 }
 
@@ -151,18 +151,18 @@ nav a.nav-active { color: var(--purple) !important; }
     align-items: center;
     gap: 7px;
     background: rgba(109,40,217,0.07);
-    border: 1.5px solid var(--border-purple);
+    border: 1.5px solid var(--border-green);
     border-radius: 6px;
     padding: 7px 16px;
     font-family: var(--font-display);
     font-size: 0.45rem;
-    color: var(--purple);
+    color: var(--green);
     transition: background var(--transition), border-color var(--transition);
 }
 
 .value-pill:hover {
     background: rgba(109,40,217,0.1);
-    border-color: var(--purple);
+    border-color: var(--green);
 }
 
 .stats-bar {
@@ -197,7 +197,7 @@ nav a.nav-active { color: var(--purple) !important; }
 .stat-big {
     font-family: var(--font-display);
     font-size: clamp(1.4rem,3vw,2.2rem);
-    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    background: linear-gradient(90deg, var(--green), var(--green-light));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -246,7 +246,7 @@ nav a.nav-active { color: var(--purple) !important; }
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .team-full-card:hover {
-    border-color: var(--border-purple);
+    border-color: var(--border-green);
     transform: translateX(6px);
     box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
@@ -329,7 +329,7 @@ nav a.nav-active { color: var(--purple) !important; }
 }
 .tfc-role {
     font-size: 1.05rem;
-    color: var(--purple);
+    color: var(--green);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -362,10 +362,10 @@ nav a.nav-active { color: var(--purple) !important; }
 }
 .tfc-bar div {
     height: 100%;
-    background: linear-gradient(90deg, var(--purple), var(--purple-light));
+    background: linear-gradient(90deg, var(--green), var(--green-light));
     width: 0;
     transition: width 1.2s ease;
-    box-shadow: 0 0 6px var(--purple);
+    box-shadow: 0 0 6px var(--green);
 }
 .team-full-card.visible .tfc-bar div { width: var(--w); }
 
@@ -377,7 +377,7 @@ nav a.nav-active { color: var(--purple) !important; }
 .tfc-tags span {
     font-family: var(--font-display);
     font-size: 0.37rem;
-    color: var(--purple);
+    color: var(--green);
     background: rgba(109,40,217,0.07);
     border: 1px solid rgba(179,37,235,0.2);
     padding: 4px 10px;
@@ -418,18 +418,18 @@ nav a.nav-active { color: var(--purple) !important; }
     transition: border-color var(--transition), transform var(--transition);
 }
 .value-card:hover {
-    border-color: var(--border-purple);
+    border-color: var(--border-green);
     transform: translateY(-4px);
 }
 .value-icon {
     width: 48px; height: 48px;
     background: rgba(109,40,217,0.07);
-    border: 1.5px solid var(--border-purple);
+    border: 1.5px solid var(--border-green);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--purple);
+    color: var(--green);
     font-size: 1rem;
 }
 .value-card h3 {

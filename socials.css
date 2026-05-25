@@ -120,7 +120,7 @@
 .form-group label {
     font-family: var(--font-display);
     font-size: 0.38rem;
-    color: var(--purple-light);
+    color: var(--green-light);
     letter-spacing: 0.1em;
 }
 
@@ -154,11 +154,11 @@
     transition: all var(--transition);
     user-select: none;
 }
-.chip:hover { border-color: var(--border-purple); color: var(--purple-light); }
+.chip:hover { border-color: var(--border-green); color: var(--green-light); }
 .chip.active {
-    border-color: var(--purple);
+    border-color: var(--green);
     background: rgba(22,101,52,0.12);
-    color: var(--purple-light);
+    color: var(--green-light);
 }
 
 .budget-options { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -174,11 +174,11 @@
     transition: all var(--transition);
 }
 .budget-opt input:checked + span {
-    border-color: var(--purple);
+    border-color: var(--green);
     background: rgba(22,101,52,0.12);
-    color: var(--purple-light);
+    color: var(--green-light);
 }
-.budget-opt:hover span { border-color: var(--border-purple); color: var(--purple-light); }
+.budget-opt:hover span { border-color: var(--border-green); color: var(--green-light); }
 
 .send-btn {
     width: 100%;
@@ -253,7 +253,7 @@
     transform: translateX(4px);
 }
 .channel-card:hover .ch-arrow {
-    color: var(--purple-light);
+    color: var(--green-light);
     transform: translateX(3px);
 }
 
@@ -265,7 +265,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--purple-light);
+    color: var(--green-light);
     font-size: 0.85rem;
     flex-shrink: 0;
 }
@@ -371,10 +371,10 @@
     line-height: 1.6;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary:hover { color: var(--purple-light); }
+.faq-item summary:hover { color: var(--green-light); }
 
 .faq-icon {
-    color: var(--purple-light);
+    color: var(--green-light);
     font-size: 0.8rem;
     flex-shrink: 0;
     transition: transform var(--transition);
