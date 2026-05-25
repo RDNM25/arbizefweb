@@ -61,7 +61,6 @@
     border-radius: var(--radius-lg);
     overflow: hidden;
     width: 100%;
-    /* Stretch to fill the grid row height */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -72,7 +71,6 @@
     align-items: center;
     gap: 12px;
     padding: 14px 20px;
-    background: background: #ffffff;
     border-bottom: 1px solid var(--border);
 }
 .terminal-dots { display: flex; gap: 6px; }
@@ -93,7 +91,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    /* Fill remaining height so form doesn't leave dead space */
     flex: 1;
 }
 
@@ -128,7 +125,6 @@
 }
 
 .arcade-input {
-    background: background: #ffffff;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     padding: 11px 14px;
@@ -146,7 +142,6 @@
     box-shadow: 0 0 0 3px rgba(22,101,52,0.1);
 }
 
-/* Subject chips */
 .subject-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
     font-family: var(--font-display);
@@ -166,7 +161,6 @@
     color: var(--purple-light);
 }
 
-/* Budget radios */
 .budget-options { display: flex; flex-wrap: wrap; gap: 10px; }
 .budget-opt { display: flex; align-items: center; cursor: pointer; }
 .budget-opt input { display: none; }
@@ -221,13 +215,11 @@
     gap: 14px;
 }
 
-/* REACH_US block grows to fill remaining right column height */
 .info-panel-block.grow {
     flex: 1;
     min-height: 0;
 }
 
-/* Channels list stretches evenly inside the grown block */
 .info-panel-block.grow .contact-channels {
     flex: 1;
     display: flex;
@@ -306,7 +298,6 @@
     transition: color var(--transition), transform var(--transition);
 }
 
-/* Status panel */
 .status-panel { display: flex; flex-direction: column; gap: 0; }
 .status-row {
     display: flex;

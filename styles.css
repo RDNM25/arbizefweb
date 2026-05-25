@@ -340,7 +340,6 @@ section {
 
 @media (max-width: 768px) { .arcade-deco { display: none; } }
 
-/* Hero content */
 .hero-wrapper {
     display: flex;
     flex-direction: column;
@@ -432,7 +431,6 @@ a.btn-primary, a.btn-ghost {
     color: var(--purple);
 }
 
-/* Progress bar */
 .hero-progress {
     width: 100%;
     max-width: 380px;
@@ -461,7 +459,6 @@ a.btn-primary, a.btn-ghost {
 }
 @keyframes load-progress { to { width: 100%; } }
 
-/* Ticker */
 .ticker-wrap {
     position: absolute;
     bottom: 0;
@@ -978,13 +975,11 @@ footer {
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
-/* ── Sidebar ── */
 [data-theme="dark"] .sidebar {
     background: #161b22;
     box-shadow: -8px 0 40px rgba(0,0,0,0.6);
 }
 
-/* ── Hero ── */
 [data-theme="dark"] #Hero {
     background:
         radial-gradient(ellipse 70% 70% at 20% 20%, rgba(22,101,52,0.14) 0%, transparent 55%),
@@ -999,7 +994,6 @@ footer {
 [data-theme="dark"] .ticker-wrap { background: rgba(22,101,52,0.08); }
 [data-theme="dark"] .hero-badge  { background: rgba(22,101,52,0.1); }
 
-/* ── Buttons ── */
 [data-theme="dark"] .btn-ghost,
 [data-theme="dark"] a.btn-ghost {
     background: rgba(255,255,255,0.04);
@@ -1012,7 +1006,6 @@ footer {
     color: #4ade80;
 }
 
-/* ── Cards (service, team) ── */
 [data-theme="dark"] .service-card  { background: var(--bg-card); }
 [data-theme="dark"] .service-card.featured {
     background: linear-gradient(135deg, var(--bg-card) 60%, rgba(22,101,52,0.06));
@@ -1020,7 +1013,6 @@ footer {
 [data-theme="dark"] .team-card     { background: var(--bg); }
 [data-theme="dark"] .team-status.online { border-color: var(--bg); }
 
-/* ── About image fade ── */
 [data-theme="dark"] .img-pixel-border {
     background: linear-gradient(to right, rgba(22,27,34,0.65) 0%, transparent 30%);
 }
@@ -1028,7 +1020,6 @@ footer {
     background: rgba(13,17,23,0.82);
 }
 
-/* ── Forms ── */
 [data-theme="dark"] .arcade-input {
     background: rgba(255,255,255,0.04);
     border-color: var(--border);
@@ -1039,7 +1030,6 @@ footer {
     box-shadow: 0 0 0 3px rgba(22,101,52,0.12);
 }
 
-/* ── Scanlines (stronger in dark) ── */
 [data-theme="dark"] .scanlines {
     background: repeating-linear-gradient(
         0deg,
@@ -1050,13 +1040,11 @@ footer {
     );
 }
 
-/* ── Page hero (about/services/contact inner pages) ── */
 [data-theme="dark"] .page-hero {
     background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(22,101,52,0.14) 0%, transparent 70%),
                 var(--bg) !important;
 }
 
-/* ── Story section (about page) ── */
 [data-theme="dark"] .story-section   { background: var(--bg); }
 [data-theme="dark"] .stats-bar       { background: var(--bg-card); }
 [data-theme="dark"] .team-section    { background: var(--bg); }
@@ -1065,13 +1053,11 @@ footer {
 [data-theme="dark"] .value-card      { background: var(--bg); }
 [data-theme="dark"] .cta-section     { background: var(--bg); }
 
-/* ── Services page ── */
 [data-theme="dark"] .services-detail-section { background: var(--bg) !important; }
 [data-theme="dark"] .service-deep    { background: var(--bg-card); }
 [data-theme="dark"] .process-section { background: var(--bg-card); }
 [data-theme="dark"] .process-step h3 { color: var(--text); }
 
-/* ── Contact / Socials page ── */
 [data-theme="dark"] .contact-main-section { background: var(--bg) !important; }
 [data-theme="dark"] .contact-form-panel   { background: var(--bg-card); }
 [data-theme="dark"] .panel-header         { background: rgba(255,255,255,0.02); }
