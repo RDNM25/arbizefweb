@@ -1,4 +1,4 @@
-// Theme — apply before render to prevent flash
+
 (function () {
     const saved = localStorage.getItem('arbisef-theme') || 'light';
     document.documentElement.setAttribute('data-theme', saved);
@@ -21,12 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateThemeIcon(document.documentElement.getAttribute('data-theme') || 'light');
 });
 
-// Nav scroll state
 window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Sidebar
 function showsidebar() {
     document.getElementById('sidebar').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -47,7 +45,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Reveal on scroll
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -58,7 +55,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Team skill bars
 document.querySelectorAll('.team-card').forEach(card => {
     card.querySelectorAll('.bar div').forEach(bar => {
         bar.dataset.target = bar.style.width;
@@ -79,7 +75,6 @@ const teamObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 document.querySelectorAll('.team-card').forEach(card => teamObserver.observe(card));
 
-// Stagger service cards
 const serviceCards = document.querySelectorAll('.service-card');
 const staggerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -100,7 +95,6 @@ serviceCards.forEach(card => {
     staggerObserver.observe(card);
 });
 
-// Contact form
 const sendBtn = document.querySelector('.send-btn');
 if (sendBtn) {
     sendBtn.addEventListener('click', () => {
