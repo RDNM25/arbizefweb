@@ -201,7 +201,7 @@
    PROJECTS PANEL
    ============================================= */
 
-#projects{
+.projects-section{
     background: var(--bg-card-2);
 
 }
