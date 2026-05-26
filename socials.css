@@ -48,6 +48,7 @@
     max-width: 1100px;
     align-items: stretch;
 }
+
 @media (max-width: 900px) {
     .contact-layout { grid-template-columns: 1fr; }
 }
@@ -73,7 +74,9 @@
     padding: 14px 20px;
     border-bottom: 1px solid var(--border);
 }
+
 .terminal-dots { display: flex; gap: 6px; }
+
 .terminal-dots span {
     width: 10px; height: 10px;
     border-radius: 50%;
@@ -99,6 +102,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
+
 @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
 
 .form-group {
@@ -111,11 +115,13 @@
     flex: 1;
     min-height: 0;
 }
+
 .form-group.grow .arcade-input {
     flex: 1;
     resize: none;
     min-height: 100px;
 }
+
 .form-group label {
     font-family: var(--font-display);
     font-size: 0.38rem;
@@ -136,12 +142,14 @@
     width: 100%;
 }
 .arcade-input::placeholder { color: var(--muted); opacity: 0.5; }
+
 .arcade-input:focus {
     border-color: var(--border-purple);
     box-shadow: 0 0 0 3px rgba(22,101,52,0.1);
 }
 
 .subject-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
 .chip {
     font-family: var(--font-display);
     font-size: 0.37rem;
@@ -154,6 +162,7 @@
     user-select: none;
 }
 .chip:hover { border-color: var(--border-green); color: var(--green-light); }
+
 .chip.active {
     border-color: var(--green);
     background: rgba(22,101,52,0.12);
@@ -161,8 +170,11 @@
 }
 
 .budget-options { display: flex; flex-wrap: wrap; gap: 10px; }
+
 .budget-opt { display: flex; align-items: center; cursor: pointer; }
+
 .budget-opt input { display: none; }
+
 .budget-opt span {
     font-family: var(--font-display);
     font-size: 0.37rem;
@@ -172,11 +184,13 @@
     color: var(--muted);
     transition: all var(--transition);
 }
+
 .budget-opt input:checked + span {
     border-color: var(--green);
     background: rgba(22,101,52,0.12);
     color: var(--green-light);
 }
+
 .budget-opt:hover span { border-color: var(--border-green); color: var(--green-light); }
 
 .send-btn {
@@ -246,11 +260,13 @@
     cursor: pointer;
     color: inherit;
 }
+
 .channel-card:hover {
     border-color: var(--border-purple);
     background: rgba(22,101,52,0.05);
     transform: translateX(4px);
 }
+
 .channel-card:hover .ch-arrow {
     color: var(--green-light);
     transform: translateX(3px);
@@ -268,9 +284,13 @@
     font-size: 0.85rem;
     flex-shrink: 0;
 }
+
 .channel-icon.discord   { background: rgba(88,101,242,0.12); border-color: rgba(88,101,242,0.35); color: #7289da; }
+
 .channel-icon.instagram { background: rgba(225,48,108,0.12); border-color: rgba(225,48,108,0.35); color: #e1306c; }
+
 .channel-icon.github    { background: rgba(22,101,52,0.04); border-color: rgba(22,101,52,0.07); color: #e2e8f0; }
+
 .channel-icon.twitter   { background: rgba(29,161,242,0.1);  border-color: rgba(29,161,242,0.3);  color: #1da1f2; }
 
 .channel-text {
@@ -279,11 +299,13 @@
     flex: 1;
     gap: 1px;
 }
+
 .channel-label {
     font-family: var(--font-display);
     font-size: 0.35rem;
     color: var(--muted);
 }
+
 .channel-text strong {
     font-family: var(--font-body);
     font-size: 1rem;
@@ -298,6 +320,7 @@
 }
 
 .status-panel { display: flex; flex-direction: column; gap: 0; }
+
 .status-row {
     display: flex;
     justify-content: space-between;
@@ -305,12 +328,15 @@
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
 }
+
 .status-row:last-child { border-bottom: none; }
+
 .status-label {
     font-family: var(--font-display);
     font-size: 0.37rem;
     color: var(--muted);
 }
+
 .status-val {
     font-family: var(--font-display);
     font-size: 0.38rem;
@@ -319,6 +345,7 @@
     align-items: center;
     gap: 6px;
 }
+
 .status-val.open { color: #22c55e; }
 
 /* =============================================
@@ -352,6 +379,7 @@
     overflow: hidden;
     transition: border-color var(--transition);
 }
+
 .faq-item[open] { border-color: var(--border-purple); }
 
 .faq-item summary {
@@ -369,7 +397,9 @@
     user-select: none;
     line-height: 1.6;
 }
+
 .faq-item summary::-webkit-details-marker { display: none; }
+
 .faq-item summary:hover { color: var(--green-light); }
 
 .faq-icon {
@@ -378,6 +408,7 @@
     flex-shrink: 0;
     transition: transform var(--transition);
 }
+
 .faq-item[open] .faq-icon { transform: rotate(45deg); }
 
 .faq-item p {

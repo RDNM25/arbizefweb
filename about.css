@@ -35,7 +35,9 @@
     margin-top: 6px;
 }
 .breadcrumb a { color: var(--green); transition: color var(--transition); }
+
 .breadcrumb a:hover { color: #fff; }
+
 .breadcrumb .bc-active { color: var(--text); }
 
 nav a.nav-active { color: var(--green) !important; }
@@ -82,6 +84,7 @@ nav a.nav-active { color: var(--green) !important; }
     filter: saturate(0.8) brightness(0.9);
     transition: filter 0.4s ease, transform 0.4s ease;
 }
+
 .img-frame:hover .story-img {
     filter: saturate(1) brightness(0.95);
     transform: scale(1.03);
@@ -101,12 +104,14 @@ nav a.nav-active { color: var(--green) !important; }
     box-shadow: 0 8px 30px var(--green-glow);
     z-index: 2;
 }
+
 .badge-num {
     font-family: var(--font-display);
     font-size: 1rem;
     color: #fff;
     line-height: 1;
 }
+
 .badge-label {
     font-family: var(--font-display);
     font-size: 0.4rem;
@@ -215,6 +220,7 @@ nav a.nav-active { color: var(--green) !important; }
     background: var(--border);
     flex-shrink: 0;
 }
+
 @media (max-width: 600px) { .stat-sep { display: none; } }
 
 .team-section {
@@ -245,6 +251,7 @@ nav a.nav-active { color: var(--green) !important; }
     padding: 32px;
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
+
 .team-full-card:hover {
     border-color: var(--border-green);
     transform: translateX(6px);
@@ -262,6 +269,10 @@ nav a.nav-active { color: var(--green) !important; }
     gap: 12px;
 }
 
+.tfc-left .btn-primary {
+    padding: 6px 12px;
+}
+
 .tfc-avatar {
     width: 90px; height: 90px;
     border-radius: var(--radius);
@@ -273,6 +284,7 @@ nav a.nav-active { color: var(--green) !important; }
     overflow: hidden;
     box-shadow: 0 0 24px rgba(179,37,235,0.2);
 }
+
 .tfc-avatar::before {
     content: '';
     position: absolute;
@@ -282,6 +294,7 @@ nav a.nav-active { color: var(--green) !important; }
         linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
     background-size: 12px 12px;
 }
+
 .tfc-avatar::after {
     content: attr(data-initials);
     font-family: var(--font-display);
@@ -341,18 +354,21 @@ nav a.nav-active { color: var(--green) !important; }
 }
 
 .tfc-skills { display: flex; flex-direction: column; gap: 8px; }
+
 .tfc-skill-row {
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .tfc-skill-row span {
     font-family: var(--font-display);
-    font-size: 0.36rem;
+    font-size: 0.40rem;
     color: var(--muted);
     width: 60px;
     flex-shrink: 0;
 }
+
 .tfc-bar {
     flex: 1;
     height: 4px;
@@ -360,6 +376,7 @@ nav a.nav-active { color: var(--green) !important; }
     border-radius: 0;
     overflow: hidden;
 }
+
 .tfc-bar div {
     height: 100%;
     background: linear-gradient(90deg, var(--green), var(--green-light));
@@ -367,16 +384,18 @@ nav a.nav-active { color: var(--green) !important; }
     transition: width 1.2s ease;
     box-shadow: 0 0 6px var(--green);
 }
+
 .team-full-card.visible .tfc-bar div { width: var(--w); }
 
 .tfc-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 10px;
 }
+
 .tfc-tags span {
     font-family: var(--font-display);
-    font-size: 0.37rem;
+    font-size: clamp(0.35rem,1vw,0.45rem);
     color: var(--green);
     background: rgba(109,40,217,0.07);
     border: 1px solid rgba(179,37,235,0.2);
@@ -404,7 +423,9 @@ nav a.nav-active { color: var(--green) !important; }
     width: 100%;
     max-width: 1100px;
 }
+
 @media (max-width: 900px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
+
 @media (max-width: 500px) { .values-grid { grid-template-columns: 1fr; } }
 
 .value-card {
@@ -417,10 +438,12 @@ nav a.nav-active { color: var(--green) !important; }
     gap: 12px;
     transition: border-color var(--transition), transform var(--transition);
 }
+
 .value-card:hover {
     border-color: var(--border-green);
     transform: translateY(-4px);
 }
+
 .value-icon {
     width: 48px; height: 48px;
     background: rgba(109,40,217,0.07);
@@ -432,12 +455,14 @@ nav a.nav-active { color: var(--green) !important; }
     color: var(--green);
     font-size: 1rem;
 }
+
 .value-card h3 {
     font-family: var(--font-display);
     font-size: 0.55rem;
     color: var(--text);
     line-height: 1.5;
 }
+
 .value-card p {
     font-size: clamp(1rem,1.3vw,1.15rem);
     color: var(--muted);
@@ -453,6 +478,7 @@ nav a.nav-active { color: var(--green) !important; }
     flex-direction: column;
     align-items: center;
 }
+
 .cta-inner {
     text-align: center;
     display: flex;
@@ -461,10 +487,12 @@ nav a.nav-active { color: var(--green) !important; }
     gap: 16px;
     max-width: 600px;
 }
+
 .cta-inner p {
     font-size: clamp(1.1rem,1.5vw,1.3rem);
     color: var(--muted);
 }
+
 .cta-btns {
     display: flex;
     gap: 16px;
@@ -472,6 +500,7 @@ nav a.nav-active { color: var(--green) !important; }
     justify-content: center;
     margin-top: 8px;
 }
+
 .cta-btns .btn-primary, .cta-btns .btn-ghost {
     text-decoration: none;
 }
