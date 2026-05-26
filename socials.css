@@ -141,6 +141,7 @@
     resize: none;
     width: 100%;
 }
+
 .arcade-input::placeholder { color: var(--muted); opacity: 0.5; }
 
 .arcade-input:focus {
@@ -344,9 +345,27 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    cursor: default;
+    transition: color var(--transition);
 }
 
-.status-val.open { color: #22c55e; }
+.status-val:hover { color: var(--muted); }
+
+.status-val.open { 
+    color: #22c55e; 
+    transition: color var(--transition), transform var(--transition);
+}
+
+.status-val.open:hover { 
+    color: var(--green-light); 
+    transform: scale(1.1); 
+}
+
+.status-val:hover .badge-dot-anim { animation: none; transform: scale(1.1); }
+
+.badge-dot-anim{
+    transition: transform var(--transition);
+}
 
 /* =============================================
    FAQ

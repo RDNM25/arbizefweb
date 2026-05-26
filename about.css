@@ -1,3 +1,6 @@
+/* =============================================
+   ABOUT HERO
+   ============================================= */
 .page-hero {
     min-height: 42vh !important;
     overflow: hidden !important;
@@ -34,6 +37,7 @@
     color: var(--muted);
     margin-top: 6px;
 }
+
 .breadcrumb a { color: var(--green); transition: color var(--transition); }
 
 .breadcrumb a:hover { color: #fff; }
@@ -42,6 +46,9 @@
 
 nav a.nav-active { color: var(--green) !important; }
 
+/* =============================================
+   STORY
+   ============================================= */
 .story-section {
     padding: 80px clamp(20px,6vw,100px);
     min-height: unset;
@@ -227,6 +234,10 @@ nav a.nav-active { color: var(--green) !important; }
 }
 
 @media (max-width: 600px) { .stat-sep { display: none; } }
+
+/* =============================================
+   TEAMS
+   ============================================= */
 
 .team-section {
     min-height: unset !important;
@@ -429,6 +440,10 @@ nav a.nav-active { color: var(--green) !important; }
     background: var(--green-glow);
 }
 
+/* =============================================
+   VALUES
+   ============================================= */
+
 .values-section {
     min-height: unset !important;
     overflow: visible !important;
@@ -494,6 +509,10 @@ nav a.nav-active { color: var(--green) !important; }
     color: var(--muted);
     line-height: 1.5;
 }
+
+/* =============================================
+   CONTACT (About page)
+   ============================================= */
 
 .cta-section {
     min-height: unset !important;
