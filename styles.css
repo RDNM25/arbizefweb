@@ -540,7 +540,11 @@ a.btn-primary, a.btn-ghost {
     width: 100%;
 }
 
-.stat { display: flex; flex-direction: column; }
+.stat { 
+    display: flex; 
+    flex-direction: column; 
+    cursor: default;
+}
 
 .stat-num {
     font-family: var(--font-display);
@@ -767,6 +771,10 @@ a.btn-primary, a.btn-ghost {
     box-shadow: 0 12px 32px rgba(22,101,52,0.1);
 }
 
+.team-card:hover .avatar-pixel { 
+    transform: scale(1.08);
+}
+
 .team-avatar { position: relative; width: fit-content; }
 
 .avatar-pixel {
@@ -778,6 +786,7 @@ a.btn-primary, a.btn-ghost {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    transition: transform var(--transition);
 }
 
 .avatar-pixel::after {
