@@ -2,11 +2,9 @@
    SERVICES DETAIL SECTION
    ============================================= */
 .services-detail-section {
-    /* Override base section */
     min-height: unset !important;
     overflow: visible !important;
     align-items: stretch !important;
-    /* Own layout */
     padding: 80px clamp(20px,6vw,100px);
     display: flex;
     flex-direction: column;
@@ -197,4 +195,13 @@
     font-size: clamp(1rem,1.3vw,1.15rem);
     color: var(--muted);
     line-height: 1.6;
+}
+
+/* =============================================
+   PROJECTS PANEL
+   ============================================= */
+
+#projects{
+    background: var(--bg-card-2);
+
 }
