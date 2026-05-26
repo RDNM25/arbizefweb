@@ -15,7 +15,6 @@
     `;
     document.body.insertBefore(overlay, document.body.firstChild);
 
-    /* ── Canvas setup ── */
     const canvas   = document.getElementById('loader-canvas');
     const ctx      = canvas.getContext('2d');
     const fillEl   = document.getElementById('loader-fill');
@@ -26,11 +25,9 @@
     canvas.width  = W;
     canvas.height = H;
 
-    /* ── Speed states ── */
-    const SPEED_LOADING  = 1.1;   /* slow crawl while page loads   */
-    const SPEED_DASH     = 5.5;   /* dash to finish once loaded     */
+    const SPEED_LOADING  = 1.1;   
+    const SPEED_DASH     = 5.5;   
 
-    /* ── Scene constants ── */
     const GHOST_COLORS = ['#ff0000', '#ffb8ff', '#00ffff', '#ffb852'];
     const GHOST_GAP    = 28;
     const PAC_LEAD     = 32;
@@ -46,7 +43,7 @@
     let frame      = 0;
     let rafId;
     let pageLoaded = false;
-    let finishing  = false;   /* true once we're on the final dash */
+    let finishing  = false;   
 
     const dots = Array.from({ length: DOT_COUNT }, (_, i) => ({
         x: DOT_START + i * DOT_SPACING,
@@ -59,7 +56,6 @@
         dots.forEach(d => { d.eaten = false; d.alpha = 1; d.scale = 1; });
     }
 
-    /* ── Draw helpers ── */
     function drawPacman(x, y, mouth) {
         const r     = 13;
         const start = (mouth * Math.PI) / 180;
@@ -139,12 +135,10 @@
         ctx.restore();
     }
 
-    /* ── Animation loop ── */
     function tick() {
         frame++;
         const t = frame / 60;
 
-        /* smoothly lerp speed toward target */
         const targetSpeed = finishing ? SPEED_DASH : SPEED_LOADING;
         speed += (targetSpeed - speed) * 0.08;
 
@@ -162,16 +156,13 @@
 
         if (pacX > W + 20) {
             if (finishing) {
-                /* page loaded + run complete → hide */
                 doHide();
                 return;
             }
-            /* still loading — loop back */
             pacX = -16;
             resetDots();
         }
 
-        /* switch to dash the moment page is ready */
         if (pageLoaded && !finishing) {
             finishing = true;
             statusEl.textContent = '\u258c LAUNCHING...';
@@ -205,7 +196,6 @@
 
     tick();
 
-    /* ── Trigger dash when page is fully loaded ── */
     function onPageLoad() {
         pageLoaded = true;
     }
