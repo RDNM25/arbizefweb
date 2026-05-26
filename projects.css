@@ -29,8 +29,12 @@
 
 .service-deep:hover {
     border-color: var(--border-green);
-    transform: translateX(6px);
+    transform: translateX(7px);
     box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.service-deep:hover .sd-icon-col {
+    transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
@@ -44,6 +48,7 @@
     justify-content: flex-start;
     gap: 16px;
     padding-top: 4px;
+    transition: transform var(--transition);
 }
 
 .sd-icon-wrap {
@@ -70,12 +75,14 @@
     flex-direction: column;
     gap: 14px;
 }
+
 .sd-content h2 {
     font-family: var(--font-display);
     font-size: clamp(0.7rem,1.4vw,0.95rem);
     color: var(--text);
     line-height: 1.4;
 }
+
 .sd-lead {
     font-size: clamp(1.05rem,1.4vw,1.25rem);
     color: var(--muted);
@@ -87,6 +94,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px 24px;
 }
+
 @media (max-width: 500px) { .sd-features { grid-template-columns: 1fr; } }
 
 .sd-feature {
@@ -96,11 +104,24 @@
     font-size: clamp(1rem,1.3vw,1.15rem);
     color: var(--text);
     line-height: 1.4;
+    cursor: default;
+    transition: color var(--transition);
 }
+
+.sd-feature:hover {
+    color: var(--muted);
+}
+
+.sd-feature:hover i {
+    color: var(--green);
+    transform: scale(1.2);
+}
+
 .sd-feature i {
     color: var(--green-light);
     font-size: 0.7rem;
     flex-shrink: 0;
+    transition: color var(--transition), transform var(--transition);
 }
 
 .sd-stack {
@@ -112,12 +133,14 @@
     border-top: 1px solid var(--border);
     margin-top: 4px;
 }
+
 .sd-stack-label {
     font-family: var(--font-display);
     font-size: 0.38rem;
     color: var(--muted);
     letter-spacing: 0.1em;
 }
+
 .sd-stack span:not(.sd-stack-label) {
     font-family: var(--font-display);
     font-size: 0.37rem;
@@ -126,6 +149,13 @@
     border: 1px solid rgba(109,40,217,0.2);
     padding: 4px 11px;
     border-radius: 4px;
+    cursor: default;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.sd-stack span:not(.sd-stack-label):hover {
+    background: var(--green-glow);
+    transform: translateY(-2px);
 }
 
 /* =============================================
@@ -177,6 +207,12 @@
     -webkit-text-fill-color: transparent;
     line-height: 1;
     margin-bottom: 4px;
+    cursor: default;
+    transition: transform var(--transition);
+}
+
+.process-step:hover .step-num {
+    transform: scale(1.1);
 }
 
 .step-line {
