@@ -196,7 +196,7 @@ nav a:hover { color: var(--green); background: rgba(22,101,52,0.07); }
    ============================================= */
 section {
     min-height: 100vh;
-    padding: calc(var(--nav-h) + 70px) clamp(20px, 6vw, 100px) 90px;
+    padding: 80px clamp(20px,6vw,100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +301,6 @@ section {
         radial-gradient(ellipse 70% 70% at 20% 20%, rgba(74,222,128,0.14) 0%, transparent 55%),
         radial-gradient(ellipse 50% 50% at 80% 80%, rgba(22,101,52,0.08) 0%, transparent 50%),
         #f5f3ff;
-    justify-content: center;
     align-items: flex-start;
     padding-bottom: 80px;
     overflow: visible;
@@ -714,7 +713,7 @@ a.btn-primary, a.btn-ghost {
 
 .service-card:hover {
     border-color: var(--border-green);
-    transform: translateY(-6px) !important;
+    transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(22,101,52,0.1);
 }
 

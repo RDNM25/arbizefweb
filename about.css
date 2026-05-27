@@ -3,12 +3,7 @@
    ============================================= */
 #page-hero {
     min-height: 42vh !important;
-    overflow: hidden !important;
     padding: calc(var(--nav-h) + 70px) clamp(20px,6vw,100px) 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(109,40,217,0.12) 0%, transparent 70%);
     text-align: center;
 }
@@ -50,9 +45,8 @@ nav a.nav-active { color: var(--green) !important; }
    STORY
    ============================================= */
 .story-section {
-    padding: 80px clamp(20px,6vw,100px);
-    min-height: unset;
-    overflow: visible;
+    min-height: unset !important;
+    overflow: visible !important;
 }
 
 .story-wrapper {
@@ -238,15 +232,10 @@ nav a.nav-active { color: var(--green) !important; }
 /* =============================================
    TEAMS
    ============================================= */
-
 .team-section {
     min-height: unset !important;
     overflow: visible !important;
-    padding: 80px clamp(20px,6vw,100px);
     background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .team-full-grid {
@@ -443,18 +432,11 @@ nav a.nav-active { color: var(--green) !important; }
 /* =============================================
    VALUES
    ============================================= */
-
 .values-section {
     min-height: unset !important;
-    overflow: visible !important;
-    align-items: center !important;
-    padding: 80px clamp(20px,6vw,100px);
     background: var(--bg-card);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .values-grid {
@@ -513,15 +495,10 @@ nav a.nav-active { color: var(--green) !important; }
 /* =============================================
    CONTACT (About page)
    ============================================= */
-
 .cta-section {
     min-height: unset !important;
     overflow: visible !important;
-    padding: 80px clamp(20px,6vw,100px);
     background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .cta-inner {
