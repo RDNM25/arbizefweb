@@ -1,4 +1,3 @@
-
 (function () {
     const saved = localStorage.getItem('arbisef-theme') || 'light';
     document.documentElement.setAttribute('data-theme', saved);
