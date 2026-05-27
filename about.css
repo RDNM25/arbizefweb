@@ -1,7 +1,7 @@
 /* =============================================
    ABOUT HERO
    ============================================= */
-.page-hero {
+#page-hero {
     min-height: 42vh !important;
     overflow: hidden !important;
     padding: calc(var(--nav-h) + 70px) clamp(20px,6vw,100px) 60px;
