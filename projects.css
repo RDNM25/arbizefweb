@@ -98,6 +98,7 @@
 @media (max-width: 500px) { .sd-features { grid-template-columns: 1fr; } }
 
 .sd-feature {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 8px;
