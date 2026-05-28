@@ -720,7 +720,7 @@ a.btn-primary, a.btn-ghost {
 .service-card:hover::before { opacity: 1; }
 
 .service-card.featured {
-    border-color: var(--border-green);
+    border-color: var(--green);
     background: linear-gradient(135deg, #ffffff 60%, rgba(109,40,217,0.04));
 }
 
@@ -739,12 +739,12 @@ a.btn-primary, a.btn-ghost {
 
 .service-icon {
     width: 56px; height: 56px;
-    background: rgba(109,40,217,0.08);
     border: 1.5px solid var(--border-green);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.5;
 }
 
 .service-card h3 {
@@ -1096,11 +1096,14 @@ footer {
 
 [data-theme="dark"] .service-card  { background: var(--bg-card); }
 
+[data-theme="dark"] .service-icon { opacity: 1.0; } 
+
 [data-theme="dark"] .service-card.featured {
     background: linear-gradient(135deg, var(--bg-card) 60%, rgba(22,101,52,0.06));
+    border-color: var(--green);
 }
 
-[data-theme="dark"] .team-card     { background: var(--bg); }
+[data-theme="dark"] .team-card { background: var(--bg); }
 
 [data-theme="dark"] .team-status.online { border-color: var(--bg); }
 
@@ -1137,9 +1140,11 @@ footer {
 [data-theme="dark"] .cta-section     { background: var(--bg); }
 
 [data-theme="dark"] .services-detail-section { background: var(--bg) !important; }
-[data-theme="dark"] .service-deep    { background: var(--bg-card); }
-[data-theme="dark"] .process-section { background: var(--bg-card); }
-[data-theme="dark"] .process-step h3 { color: var(--text); }
+[data-theme="dark"] .service-deep            { background: var(--bg-card); }
+[data-theme="dark"] .sd-icon-col img         { opacity: 1.0; }
+[data-theme="dark"] .sd-number               { color: rgba(255,255,255,0.08); }
+[data-theme="dark"] .process-section         { background: var(--bg-card); }
+[data-theme="dark"] .process-step h3         { color: var(--text); }
 
 [data-theme="dark"] .contact-main-section { background: var(--bg) !important; }
 [data-theme="dark"] .contact-form-panel   { background: var(--bg-card); }

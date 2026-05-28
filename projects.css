@@ -47,10 +47,13 @@
     transition: transform var(--transition);
 }
 
+.sd-icon-col img {
+    opacity: 0.5;
+    transition: opacity var(--transition);
+}
+
 .sd-icon-wrap {
     width: 88px; height: 88px;
-    background: var(--ic, rgba(109,40,217,0.1));
-    border: 1px solid var(--ib, rgba(109,40,217,0.35));
     border-radius: var(--radius);
     display: flex;
     align-items: center;
@@ -61,7 +64,7 @@
 .sd-number {
     font-family: var(--font-display);
     font-size: 1.2rem;
-    color: rgba(255,255,255,0.08);
+    color: rgba(0, 0, 0, 0.438);
     line-height: 1;
     letter-spacing: 0.05em;
 }
