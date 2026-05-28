@@ -476,6 +476,11 @@ nav a.nav-active { color: var(--green) !important; }
     justify-content: center;
     color: var(--green);
     font-size: 1rem;
+    transition: transform var(--transition);
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.2);
 }
 
 .value-card h3 {
