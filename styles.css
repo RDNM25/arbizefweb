@@ -739,7 +739,6 @@ a.btn-primary, a.btn-ghost {
 
 .service-icon {
     width: 56px; height: 56px;
-    border: 1.5px solid var(--border-green);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
