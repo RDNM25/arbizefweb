@@ -5,23 +5,14 @@
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    background: rgba(34,197,94,0.08);
-    border: 1px solid rgba(34,197,94,0.25);
+    background: var(--green-glow);
+    border: 1px solid var(--green);
     border-radius: 6px;
     padding: 7px 16px;
     font-family: var(--font-display);
     font-size: 0.4rem;
-    color: #22c55e;
+    color: var(--green-light);
     margin-bottom: 4px;
-}
-
-.badge-dot-anim {
-    width: 7px; height: 7px;
-    background: #22c55e;
-    border-radius: 50%;
-    box-shadow: 0 0 7px #22c55e;
-    animation: pulse-green 1.5s ease-in-out infinite;
-    flex-shrink: 0;
 }
 
 /* =============================================
@@ -140,7 +131,7 @@
 
 .arcade-input:focus {
     border-color: var(--border-purple);
-    box-shadow: 0 0 0 3px rgba(22,101,52,0.1);
+    box-shadow: 0 0 0 3px var(--border)
 }
 
 .subject-chips { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -159,7 +150,7 @@
 
 .chip.active {
     border-color: var(--green);
-    background: rgba(22,101,52,0.12);
+    background: var(--border);
     color: var(--green-light);
 }
 
@@ -181,7 +172,7 @@
 
 .budget-opt input:checked + span {
     border-color: var(--green);
-    background: rgba(22,101,52,0.12);
+    background: var(--border);
     color: var(--green-light);
 }
 
@@ -257,7 +248,7 @@
 
 .channel-card:hover {
     border-color: var(--border-purple);
-    background: rgba(22,101,52,0.05);
+    background: rgba(109,40,217,0.05);
     transform: translateX(4px);
 }
 
@@ -268,7 +259,7 @@
 
 .channel-icon {
     width: 34px; height: 34px;
-    background: rgba(22,101,52,0.1);
+    background: rgba(109,40,217,0.1);
     border: 1px solid var(--border-purple);
     border-radius: var(--radius-sm);
     display: flex;
@@ -283,7 +274,7 @@
 
 .channel-icon.instagram { background: rgba(225,48,108,0.12); border-color: rgba(225,48,108,0.35); color: #e1306c; }
 
-.channel-icon.github    { background: rgba(22,101,52,0.04); border-color: rgba(22,101,52,0.07); color: #e2e8f0; }
+.channel-icon.github    { background: rgba(109,40,217,0.04); border-color: rgba(109,40,217,0.07); color: #e2e8f0; }
 
 .channel-icon.twitter   { background: rgba(29,161,242,0.1);  border-color: rgba(29,161,242,0.3);  color: #1da1f2; }
 
@@ -308,7 +299,7 @@
 }
 
 .ch-arrow {
-    color: rgba(22,101,52,0.12);
+    color: rgba(109,40,217,0.12);
     font-size: 0.75rem;
     transition: color var(--transition), transform var(--transition);
 }
@@ -345,19 +336,13 @@
 .status-val:hover { color: var(--muted); }
 
 .status-val.open { 
-    color: #22c55e; 
+    color: #22c55e;
     transition: color var(--transition), transform var(--transition);
 }
 
 .status-val.open:hover { 
-    color: var(--green-light); 
+    color: #16a34a;
     transform: scale(1.1); 
-}
-
-.status-val:hover .badge-dot-anim { animation: none; transform: scale(1.1); }
-
-.badge-dot-anim{
-    transition: transform var(--transition);
 }
 
 /* =============================================

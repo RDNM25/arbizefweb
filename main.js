@@ -74,6 +74,26 @@ const teamObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 document.querySelectorAll('.team-card').forEach(card => teamObserver.observe(card));
 
+const serviceCards = document.querySelectorAll('.service-card');
+const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const delay = Array.from(serviceCards).indexOf(entry.target) * 80;
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, delay);
+            staggerObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+serviceCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(24px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.25s ease, box-shadow 0.25s ease';
+    staggerObserver.observe(card);
+});
+
 const sendBtn = document.querySelector('.send-btn');
 if (sendBtn) {
     sendBtn.addEventListener('click', () => {
