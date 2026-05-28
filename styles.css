@@ -424,7 +424,6 @@ section {
 
 .hero-sub {
     font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-    color: var(--muted);
     max-width: 480px;
     line-height: 1.6;
 }
