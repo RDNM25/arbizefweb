@@ -768,6 +768,14 @@ a.btn-primary, a.btn-ghost {
     border: 1px solid var(--border-green);
     padding: 3px 9px;
     border-radius: 4px;
+    cursor: default;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.service-tags span:hover {
+    background: var(--green-glow);
+    transform: translateY(-2px);
+    transition: background var(--transition), transform var(--transition);
 }
 
 /* =============================================
