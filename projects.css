@@ -252,7 +252,9 @@
     width: 100%;
     max-width: 1200px;
 }
+
 @media (max-width: 1000px) { .proj-grid { grid-template-columns: repeat(2,1fr); } }
+
 @media (max-width: 620px)  { .proj-grid { grid-template-columns: 1fr; } }
 
 .proj-card {
@@ -264,10 +266,19 @@
     flex-direction: column;
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
+
 .proj-card:hover {
     border-color: var(--border-green);
     transform: translateY(-6px);
     box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+}
+
+.proj-card:hover .proj-icon {
+    transform: scale(1.05);
+}
+
+.proj-card:hover .proj-type-badge {
+    background: rgba(0,0,0,0.75);
 }
 
 .proj-visual {
@@ -294,204 +305,16 @@
     align-items: center;
     gap: 6px;
     z-index: 3;
+    transition: background var(--transition);
 }
 
-.proj-art {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
+.proj-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform var(--transition);
 }
-
-.plat-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg,#1e0a4a 0%,#3b1080 60%,#5b21b6 100%);
-}
-
-.plat-ground {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 28px;
-    background: repeating-linear-gradient(90deg,#78350f 0,#78350f 16px,#92400e 16px,#92400e 32px);
-    border-top: 3px solid #b45309;
-}
-
-.plat-platform {
-    position: absolute;
-    height: 12px;
-    background: #78350f;
-    border-top: 3px solid #f59e0b;
-    border-radius: 2px;
-}
-
-.plat-platform.p1 { width: 64px; left: 20px; bottom: 62px; }
-
-.plat-platform.p2 { width: 48px; left: 110px; bottom: 90px; }
-
-.plat-platform.p3 { width: 56px; right: 24px; bottom: 70px; }
-
-.plat-char {
-    position: absolute;
-    width: 16px; height: 22px;
-    left: 28px; bottom: 74px;
-    background: #f59e0b;
-    border-radius: 3px 3px 0 0;
-}
-
-.plat-char::before {
-    content:'';
-    position: absolute;
-    width: 12px; height: 10px;
-    top: -10px; left: 2px;
-    background: #fde68a;
-    border-radius: 50% 50% 0 0;
-}
-
-.plat-coin {
-    width: 10px; height: 10px;
-    background: #fbbf24;
-    border-radius: 50%;
-    box-shadow: 0 0 6px #fbbf24;
-    position: absolute;
-}
-
-.plat-coin.c1 { left: 120px; bottom: 108px; }
-
-.plat-coin.c2 { left: 145px; bottom: 108px; }
-
-.plat-coin.c3 { right: 36px; bottom: 88px; }
-
-
-.fight-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg,#07090f 0%,#1a0030 50%,#2d0050 100%);
-}
-
-.fight-floor {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 30px;
-    background: linear-gradient(90deg,#4c1d95,#6d28d9,#4c1d95);
-    border-top: 2px solid #a855f7;
-}
-
-.fighter {
-    position: absolute;
-    bottom: 30px;
-    width: 28px; height: 50px;
-}
-
-.fighter::before {
-    content: '';
-    position: absolute;
-    width: 18px; height: 18px;
-    top: 0; left: 5px;
-    border-radius: 50%;
-}
-
-.fighter::after {
-    content: '';
-    position: absolute;
-    width: 24px; height: 28px;
-    top: 16px; left: 2px;
-    border-radius: 3px 3px 0 0;
-}
-
-.fighter.f-left { left: 30px; }
-
-.fighter.f-left::before { background: #fbbf24; }
-
-.fighter.f-left::after  { background: #ef4444; }
-
-.fighter.f-right { right: 30px; transform: scaleX(-1); }
-
-.fighter.f-right::before { background: #a78bfa; }
-
-.fighter.f-right::after  { background: #6d28d9; }
-
-.fight-vs {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    font-family: var(--font-display);
-    font-size: 1rem;
-    color: #fbbf24;
-    text-shadow: 0 0 12px #f59e0b, 0 0 24px #f59e0b;
-    z-index: 2;
-}
-
-.fight-hp {
-    position: absolute;
-    top: 14px;
-    height: 6px;
-    border-radius: 3px;
-    background: #22c55e;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.fight-hp.hp-left  { left: 16px;  width: 80px; }
-
-.fight-hp.hp-right { right: 16px; width: 60px; background: #ef4444; }
-
-.fin-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg,#0a2e1a 0%,#0f4f2e 50%,#1a7a48 100%);
-}
-
-.fin-card {
-    position: absolute;
-    top: 16px; left: 16px;
-    width: 110px; height: 66px;
-    background: linear-gradient(135deg,#6d28d9,#a855f7);
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
-
-.fin-card::before {
-    content:'';
-    position: absolute;
-    bottom: 12px; left: 12px;
-    width: 32px; height: 6px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 2px;
-    box-shadow: 0 8px 0 rgba(255,255,255,0.2);
-}
-
-.fin-bar {
-    position: absolute;
-    bottom: 24px;
-    width: 18px;
-    background: rgba(34,197,94,0.7);
-    border-radius: 2px 2px 0 0;
-    border: 1px solid rgba(34,197,94,0.9);
-}
-
-.fin-bar.b1 { right: 90px; height: 40px; }
-
-.fin-bar.b2 { right: 68px; height: 60px; background: rgba(34,197,94,0.9); }
-
-.fin-bar.b3 { right: 46px; height: 30px; }
-
-.fin-bar.b4 { right: 24px; height: 50px; }
-
-.fin-line {
-    position: absolute;
-    bottom: 56px; right: 18px;
-    width: 76px; height: 2px;
-    background: transparent;
-    border-top: 2px dashed rgba(255,255,255,0.3);
-}
-
-.fin-dot {
-    position: absolute;
-    width: 6px; height: 6px;
-    background: #fbbf24;
-    border-radius: 50%;
-    box-shadow: 0 0 5px #fbbf24;
-}
-
-.fin-dot.d1 { right: 86px; bottom: 64px; }
-
-.fin-dot.d2 { right: 59px; bottom: 78px; }
-
-.fin-dot.d3 { right: 37px; bottom: 56px; }
 
 .proj-body {
     padding: 22px;
@@ -528,6 +351,13 @@
     border: 1px solid rgba(109,40,217,0.2);
     padding: 3px 8px;
     border-radius: 3px;
+    cursor: default;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.proj-stack-tags span:hover {
+    background: var(--green-glow);
+    transform: translateY(-2px);
 }
 
 .proj-title {
@@ -567,6 +397,13 @@
     padding: 3px 8px;
     border: 1px solid var(--border);
     border-radius: 3px;
+    cursor: default;
+    transition: border-color var(--transition), transform var(--transition);
+}
+
+.ptag:hover {
+    border-color: var(--green);
+    transform: translateY(-2px);
 }
 
 .proj-link {
