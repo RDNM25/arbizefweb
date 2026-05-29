@@ -104,6 +104,12 @@ nav a.nav-active { color: var(--green) !important; }
     align-items: center;
     box-shadow: 0 8px 30px var(--green-glow);
     z-index: 2;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.floating-badge:hover{
+    background: var(--green-light);
+    transform: translateY(-4px) scale(1.05);
 }
 
 .badge-num {

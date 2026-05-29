@@ -662,6 +662,14 @@ a.btn-primary, a.btn-ghost {
     padding: 4px 10px;
     border: 1px solid var(--border-green);
     border-radius: 4px;
+    cursor: default;
+    transition: color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.img-caption:hover {
+    color: var(--green-light);
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 8px var(--green-glow);
 }
 
 @media (max-width: 768px) {
