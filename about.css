@@ -508,7 +508,6 @@ nav a.nav-active { color: var(--green) !important; }
 .cta-section {
     min-height: unset !important;
     overflow: visible !important;
-    border-top: 2px solid var(--border);
     background: var(--bg);
 }
 

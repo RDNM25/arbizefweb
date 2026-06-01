@@ -430,3 +430,11 @@
     color: #fff;
     transform: translateY(-2px);
 }
+
+/* =============================================
+   CONTACT (Service)
+   ============================================= */
+.cta-section {
+    min-height: 100vh !important;
+    border-top: 2px solid var(--border);
+}
