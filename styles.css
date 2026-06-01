@@ -673,7 +673,7 @@ a.btn-primary, a.btn-ghost {
 }
 
 @media (max-width: 768px) {
-    .about-wrapper { flex-direction: column; }
+    .about-wrapper { flex-direction: column-reverse; }
     .about-image { flex: none; height: 280px; min-height: 0; }
     .img-pixel-border { background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 20%); }
 }
