@@ -678,6 +678,7 @@ a.btn-primary, a.btn-ghost {
     .about-image { flex: none; height: 280px; min-height: 0; }
     .img-pixel-border { background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 20%); }
     .about-text { align-items: center; text-align: center; padding: clamp(20px, 4vw, 60px); }
+    .about-stats { justify-content: center; }
 }
 
 /* =============================================
