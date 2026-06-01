@@ -388,6 +388,8 @@ section {
     z-index: 1;
 }
 
+@media (max-width: 500px) { .hero-wrapper { align-items: center; text-align: center; } }
+
 .hero-badge {
     display: inline-flex;
     align-items: center;
@@ -675,6 +677,7 @@ a.btn-primary, a.btn-ghost {
     .about-wrapper { flex-direction: column-reverse; }
     .about-image { flex: none; height: 280px; min-height: 0; }
     .img-pixel-border { background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, transparent 20%); }
+    .about-text { align-items: center; text-align: center; padding: clamp(20px, 4vw, 60px); }
 }
 
 /* =============================================
@@ -692,7 +695,7 @@ a.btn-primary, a.btn-ghost {
 
 @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 
-@media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .services-grid { grid-template-columns: 2fr; } }
 
 .service-card {
     background: var(--bg-card);

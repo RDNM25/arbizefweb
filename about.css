@@ -146,6 +146,7 @@ nav a.nav-active { color: var(--green) !important; }
     flex-direction: column;
     gap: 16px;
 }
+
 .story-text-col p {
     font-size: clamp(1.1rem,1.4vw,1.25rem);
     color: var(--muted);
@@ -233,6 +234,10 @@ nav a.nav-active { color: var(--green) !important; }
 }
 
 @media (max-width: 600px) { .stat-sep { display: none; } }
+@media (max-width: 820px) {
+    .story-text-col { text-align: center; }
+    .story-values { justify-content: center; }
+}
 
 /* =============================================
    TEAMS
@@ -433,6 +438,13 @@ nav a.nav-active { color: var(--green) !important; }
     transform: scale(1.05) translateY(-2px);
     background: var(--green-glow);
 }
+
+@media (max-width: 640px) {
+    .tfc-role { justify-content: center; }
+    .tfc-bio { text-align: center; }
+    .tfc-right h3 { text-align: center; }
+}
+
 
 /* =============================================
    VALUES
