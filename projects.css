@@ -279,6 +279,11 @@
 
 .proj-card:hover .proj-type-badge {
     background: rgba(0,0,0,0.75);
+    transform: scale(1.1);
+}
+
+.proj-card:hover .proj-num {
+    color: var(--green-light);
 }
 
 .proj-visual {
@@ -305,7 +310,7 @@
     align-items: center;
     gap: 6px;
     z-index: 3;
-    transition: background var(--transition);
+    transition: background var(--transition), transform var(--transition);
 }
 
 .proj-icon {
@@ -331,9 +336,10 @@
 
 .proj-num {
     font-family: var(--font-display);
-    font-size: 0.55rem;
+    font-size: clamp(0.5rem, 1vw, 0.75rem);
     color: var(--border-green);
     letter-spacing: 0.05em;
+    transition: color var(--transition);
 }
 
 .proj-stack-tags {
@@ -344,7 +350,7 @@
 
 .proj-stack-tags span {
     font-family: var(--font-display);
-    font-size: 0.3rem;
+    font-size: clamp(0.3rem, 0.8vw, 0.4rem);
     color: var(--green-light);
     background: rgba(109,40,217,0.1);
     border: 1px solid rgba(109,40,217,0.2);
@@ -377,7 +383,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--border);
     margin-top: 4px;
@@ -391,7 +396,7 @@
 
 .ptag {
     font-family: var(--font-display);
-    font-size: 0.3rem;
+    font-size: clamp(0.2rem, 0.5vw, 0.3rem);
     color: var(--muted);
     padding: 3px 8px;
     border: 1px solid var(--border);
