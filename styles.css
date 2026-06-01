@@ -8,7 +8,6 @@
 :root {
     --bg:            #f5f3ff;
     --bg-card:       #ffffff;
-    --bg-card-2:     #ede9fe;
     --border:        rgba(109,40,217,0.12);
     --border-green: rgba(109,40,217,0.28);
     --green:        #6d28d9;
@@ -1057,7 +1056,6 @@ footer {
 
     --bg:            #0d1117;
     --bg-card:       #161b22;
-    --bg-card-2:     #1e2533;
     --border:        rgba(22,101,52,0.14);
     --border-green: rgba(22,101,52,0.30);
     --text:          #e6f4f1;
