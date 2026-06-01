@@ -1,5 +1,4 @@
 (function () {
-    /* ── Inject overlay HTML ── */
     const overlay = document.createElement('div');
     overlay.id = 'arbisef-loader';
     overlay.innerHTML = `
