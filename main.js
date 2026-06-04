@@ -107,10 +107,8 @@ serviceCards.forEach(card => {
         const ticker = document.getElementById('ticker');
         if (!ticker) return;
 
-        // Grab the original items only
         const originalHTML = ticker.innerHTML;
 
-        // Create a hidden measuring element to get exact single-set width
         const measurer = document.createElement('div');
         measurer.style.cssText = `
             position: absolute;
@@ -126,11 +124,9 @@ serviceCards.forEach(card => {
         measurer.innerHTML = originalHTML;
         document.body.appendChild(measurer);
 
-        // Force browser to calculate layout
-        const singleWidth = measurer.scrollWidth + 32; // +32 for the gap after last item
+        const singleWidth = measurer.scrollWidth + 32;
         document.body.removeChild(measurer);
 
-        // Now fill ticker with enough copies
         ticker.innerHTML = originalHTML + originalHTML + originalHTML;
 
         let position = 0;
@@ -140,7 +136,7 @@ serviceCards.forEach(card => {
         function step() {
             position -= 0.6;
             if (position <= -singleWidth) {
-                position += singleWidth; // shift back by exactly one set
+                position += singleWidth;
             }
             ticker.style.transform = `translateX(${position}px)`;
             rafId = requestAnimationFrame(step);

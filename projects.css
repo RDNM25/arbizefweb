@@ -324,7 +324,7 @@
     padding: 22px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 3px;
     flex: 1;
 }
 
@@ -372,11 +372,20 @@
     line-height: 1.4;
 }
 
+.proj-author {
+    opacity: 0.4;
+    font-family: var(--font-display);
+    font-size: clamp(0.4rem, 0.9vw, 0.5rem);
+    padding: 4px;
+    margin-bottom: 4px;
+}
+
 .proj-desc {
     font-size: clamp(1rem,1.2vw,1.1rem);
     color: var(--muted);
     line-height: 1.6;
     flex: 1;
+    margin-bottom: 12px;
 }
 
 .proj-footer {
