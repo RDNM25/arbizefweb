@@ -101,3 +101,76 @@ serviceCards.forEach(card => {
     }, { passive: true });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
+
+(function () {
+    function initTicker() {
+        const ticker = document.getElementById('ticker');
+        if (!ticker) return;
+
+        // Grab the original items only
+        const originalHTML = ticker.innerHTML;
+
+        // Create a hidden measuring element to get exact single-set width
+        const measurer = document.createElement('div');
+        measurer.style.cssText = `
+            position: absolute;
+            visibility: hidden;
+            display: flex;
+            gap: 32px;
+            white-space: nowrap;
+            font-family: var(--font-display);
+            font-size: 0.45rem;
+            letter-spacing: 0.1em;
+            pointer-events: none;
+        `;
+        measurer.innerHTML = originalHTML;
+        document.body.appendChild(measurer);
+
+        // Force browser to calculate layout
+        const singleWidth = measurer.scrollWidth + 32; // +32 for the gap after last item
+        document.body.removeChild(measurer);
+
+        // Now fill ticker with enough copies
+        ticker.innerHTML = originalHTML + originalHTML + originalHTML;
+
+        let position = 0;
+        let rafId;
+        let running = false;
+
+        function step() {
+            position -= 0.6;
+            if (position <= -singleWidth) {
+                position += singleWidth; // shift back by exactly one set
+            }
+            ticker.style.transform = `translateX(${position}px)`;
+            rafId = requestAnimationFrame(step);
+        }
+
+        function start() {
+            if (!running) {
+                running = true;
+                rafId = requestAnimationFrame(step);
+            }
+        }
+
+        function stop() {
+            running = false;
+            cancelAnimationFrame(rafId);
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) start();
+                else stop();
+            });
+        }, { threshold: 0.01 });
+
+        observer.observe(ticker.parentElement);
+    }
+
+    if (document.fonts) {
+        document.fonts.ready.then(initTicker);
+    } else {
+        window.addEventListener('load', initTicker);
+    }
+})();
