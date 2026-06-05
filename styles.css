@@ -637,18 +637,11 @@ a.btn-primary, a.btn-ghost {
     height: 100%;
     object-fit: cover;
     display: block;
+    filter: saturate(0.8) brightness(0.9);
     transition: transform 0.5s ease;
 }
 
-.about-img:hover { transform: scale(1.04); }
-
-.img-pixel-border {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0.6) 0%, transparent 28%);
-    z-index: 1;
-    pointer-events: none;
-}
+.about-image:hover .about-img { transform: scale(1.04); }
 
 .img-caption {
     position: absolute;
@@ -990,21 +983,26 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+.footer-nav-title {
+    font-family: var(--font-display);
+    font-size: 0.38rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
 .footer-nav-row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    padding: 18px clamp(20px, 5vw, 80px);
-    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    list-style: none;
+    gap: 2px;
+    line-height: 1;
 }
 
 .footer-nav-link {
     font-family: var(--font-display);
     font-size: 0.38rem;
     color: var(--muted);
-    text-decoration: none;
     transition: color var(--transition);
 }
 
@@ -1026,15 +1024,6 @@ footer {
     padding: 24px clamp(20px, 5vw, 80px);
 }
 
-@media (max-width: 700px) {
-    .footer-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-}
-
 .footer-brand {
     display: flex;
     align-items: center;
@@ -1050,7 +1039,7 @@ footer {
 .footer-credits {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
@@ -1058,7 +1047,6 @@ footer {
     font-family: var(--font-display);
     font-size: 0.36rem;
     color: var(--green);
-    opacity: 0.65;
     letter-spacing: 0.1em;
 }
 
@@ -1097,21 +1085,12 @@ footer {
     font-size: 0.35rem;
 }
 
-@media (max-width: 700px) {
-    .fcl-role { text-align: center; min-width: unset; }
-    .fcl-name { min-width: unset; }
-}
-
 .footer-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 6px;
     flex-shrink: 0;
-}
-
-@media (max-width: 700px) {
-    .footer-right { align-items: center; }
 }
 
 .footer-bottom-bar {
@@ -1133,9 +1112,28 @@ footer {
     color: var(--green);
 }
 
+@media (max-width: 797px) {
+    .footer-inner {
+        justify-content: space-around;
+    }
+}
+
 @keyframes blink-full {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-credits { align-items: center; }
+    .fcl-role { text-align: center; min-width: unset; }
+    .fcl-name { min-width: unset; }
+    .footer-right { align-items: center; }
 }
 
 /* =============================================
@@ -1183,13 +1181,6 @@ footer {
     --green-glow:   rgba(22,101,52,0.22);
 }
 
-[data-theme="dark"] body          { background: var(--bg); }
-[data-theme="dark"] #About        { background: var(--bg-card); }
-[data-theme="dark"] #Services     { background: var(--bg); }
-[data-theme="dark"] #Team         { background: var(--bg-card); }
-[data-theme="dark"] #Contact      { background: var(--bg); }
-[data-theme="dark"] footer        { background: var(--bg-card); }
-
 [data-theme="dark"] nav.scrolled {
     background: rgba(13,17,23,0.92);
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -1220,22 +1211,13 @@ footer {
 [data-theme="dark"] .btn-ghost,
 [data-theme="dark"] a.btn-ghost {
     background: rgba(255,255,255,0.04);
-    color: var(--text);
-    border-color: var(--border-green);
 }
-
-[data-theme="dark"] .service-card  { background: var(--bg-card); }
 
 [data-theme="dark"] .service-icon { opacity: 1.0; } 
 
 [data-theme="dark"] .service-card.featured {
     background: linear-gradient(135deg, var(--bg-card) 60%, rgba(22,101,52,0.06));
-    border-color: var(--green);
 }
-
-[data-theme="dark"] .team-card { background: var(--bg); }
-
-[data-theme="dark"] .team-status.online { border-color: var(--bg); }
 
 [data-theme="dark"] .img-pixel-border {
     background: linear-gradient(to right, rgba(22,27,34,0.65) 0%, transparent 30%);
@@ -1247,8 +1229,6 @@ footer {
 
 [data-theme="dark"] .arcade-input {
     background: rgba(255,255,255,0.04);
-    border-color: var(--border);
-    color: var(--text);
 }
 
 [data-theme="dark"] .arcade-input:focus {
@@ -1258,30 +1238,10 @@ footer {
 
 [data-theme="dark"] #page-hero {
     background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(22,101,52,0.14) 0%, transparent 70%),
-                var(--bg) !important;
 }
 
-[data-theme="dark"] .story-section   { background: var(--bg); }
-[data-theme="dark"] .stats-bar       { background: var(--bg-card); }
-[data-theme="dark"] .team-section    { background: var(--bg); }
-[data-theme="dark"] .team-full-card  { background: var(--bg-card); }
-[data-theme="dark"] .values-section  { background: var(--bg-card); }
-[data-theme="dark"] .value-card      { background: var(--bg); }
-[data-theme="dark"] .cta-section     { background: var(--bg); }
-
-[data-theme="dark"] .services-detail-section { background: var(--bg) !important; }
-[data-theme="dark"] .service-deep            { background: var(--bg-card); }
 [data-theme="dark"] .sd-icon-col img         { opacity: 1.0; }
 [data-theme="dark"] .sd-number               { color: rgba(255,255,255,0.08); }
-[data-theme="dark"] .process-section         { background: var(--bg-card); }
-[data-theme="dark"] .process-step h3         { color: var(--text); }
 
-[data-theme="dark"] .contact-main-section { background: var(--bg) !important; }
-[data-theme="dark"] .contact-form-panel   { background: var(--bg-card); }
 [data-theme="dark"] .panel-header         { background: rgba(255,255,255,0.02); }
-[data-theme="dark"] .info-panel-block     { background: var(--bg-card); }
-[data-theme="dark"] .channel-card         { border-color: var(--border); }
 [data-theme="dark"] .channel-card:hover   { background: rgba(22,101,52,0.06); }
-[data-theme="dark"] .faq-section          { background: var(--bg-card) !important; }
-[data-theme="dark"] .faq-item             { background: var(--bg); }
-[data-theme="dark"] .arcade-card          { border-color: var(--border-green); }

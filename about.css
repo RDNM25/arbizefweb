@@ -126,21 +126,6 @@ nav a.nav-active { color: var(--green) !important; }
     margin-top: 4px;
 }
 
-.img-frame .img-caption {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    z-index: 2;
-    font-family: var(--font-display);
-    font-size: 0.38rem;
-    color: var(--green);
-    opacity: 0.8;
-    background: rgba(7,9,15,0.75);
-    padding: 4px 10px;
-    border: 1.5px solid var(--border-green);
-    border-radius: 4px;
-}
-
 .story-text-col {
     display: flex;
     flex-direction: column;
