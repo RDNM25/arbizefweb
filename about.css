@@ -104,6 +104,7 @@ nav a.nav-active { color: var(--green) !important; }
     align-items: center;
     box-shadow: 0 8px 30px var(--green-glow);
     z-index: 2;
+    cursor: default;
     transition: background var(--transition), transform var(--transition);
 }
 
